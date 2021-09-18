@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/workbytel" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:text="SIGN UP"
+        android:textColor="#abca41"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="264dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="5"
+        android:text="SIGN UP"
+        android:textColor="#218c79"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908" />
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/f_name"-->
+<!--        android:layout_width="321dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="26dp"-->
+<!--        android:layout_marginBottom="60dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:shadowDx="1"-->
+<!--        android:shadowDy="1"-->
+<!--        app:flow_horizontalAlign="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.375"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.306">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/f_namet"-->
+<!--            android:layout_width="321dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginBottom="60dp"-->
+<!--            android:hint="First Name"-->
+<!--            android:inputType="text"-->
+<!--            android:textColor="#285864"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="normal"-->
+<!--            tools:layout_editor_absoluteX="50dp"-->
+<!--            tools:layout_editor_absoluteY="209dp" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/l_name"-->
+<!--        android:layout_width="321dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="26dp"-->
+<!--        android:layout_marginBottom="90dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:shadowDx="1"-->
+<!--        android:shadowDy="1"-->
+<!--        app:flow_horizontalAlign="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.375"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.426">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/l_namet"-->
+<!--            android:layout_width="321dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginBottom="60dp"-->
+<!--            android:hint="Last Name"-->
+<!--            android:inputType="text"-->
+<!--            android:textColor="#285864"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="normal" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/email"-->
+<!--        android:layout_width="321dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="26dp"-->
+<!--        android:layout_marginBottom="60dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:shadowDx="1"-->
+<!--        android:shadowDy="1"-->
+<!--        app:flow_horizontalAlign="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.375"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.497">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/emailt"-->
+<!--            android:layout_width="321dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginBottom="60dp"-->
+<!--            android:hint="Email"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:textColor="#285864"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="normal" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/m_number"-->
+<!--        android:layout_width="321dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="26dp"-->
+<!--        android:layout_marginBottom="35dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:shadowDx="1"-->
+<!--        android:shadowDy="1"-->
+<!--        app:flow_horizontalAlign="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.375"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.571">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/m_numbert"-->
+<!--            android:layout_width="321dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginBottom="35dp"-->
+<!--            android:hint="Mobile Number"-->
+<!--            android:inputType="phone"-->
+<!--            android:textColor="#285864"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="normal" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/work_area"-->
+<!--        android:layout_width="321dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginTop="55dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:shadowDx="1"-->
+<!--        android:shadowDy="1"-->
+<!--        app:flow_horizontalAlign="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.555"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.595">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/work_areat"-->
+<!--            android:layout_width="321dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:hint="Working/Searching Area"-->
+<!--            android:inputType="text"-->
+<!--            android:textColor="#285864"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="normal"-->
+<!--            tools:layout_editor_absoluteX="50dp"-->
+<!--            tools:layout_editor_absoluteY="412dp" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/password"-->
+<!--        android:layout_width="321dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="26dp"-->
+<!--        android:layout_marginBottom="2dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:shadowDx="1"-->
+<!--        android:shadowDy="1"-->
+<!--        app:flow_horizontalAlign="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.375"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.717">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/passwordt"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginBottom="2dp"-->
+<!--            android:hint="Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:textColor="#285864"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="normal"-->
+<!--            tools:layout_editor_absoluteX="50dp"-->
+<!--            tools:layout_editor_absoluteY="495dp" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/re_password"-->
+<!--        android:layout_width="321dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="26dp"-->
+<!--        android:layout_marginBottom="35dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:shadowDx="1"-->
+<!--        android:shadowDy="1"-->
+<!--        app:flow_horizontalAlign="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.359"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.842">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/re_passwordt"-->
+<!--            android:layout_width="321dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginBottom="35dp"-->
+<!--            android:hint="Re-Type Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:textColor="#285864"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="normal" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <EditText
+        android:id="@+id/f_name"
+        android:layout_width="323dp"
+        android:layout_height="52dp"
+        android:hint="First Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309" />
+
+
+    <EditText
+        android:id="@+id/l_name"
+        android:layout_width="323dp"
+        android:layout_height="52dp"
+        android:hint="Last Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.385" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="323dp"
+        android:layout_height="52dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462" />
+
+    <EditText
+        android:id="@+id/m_number"
+        android:layout_width="323dp"
+        android:layout_height="52dp"
+        android:hint="Mobile Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539" />
+
+
+    <EditText
+        android:id="@+id/work_area"
+        android:layout_width="323dp"
+        android:layout_height="52dp"
+        android:hint="Working/Searching Area"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="323dp"
+        android:layout_height="52dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <EditText
+        android:id="@+id/re_password"
+        android:layout_width="323dp"
+        android:layout_height="52dp"
+        android:hint="Re-Type Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768" />
+
+
+        <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="493dp"
+        android:layout_height="415dp"
+        android:layout_marginStart="40dp"
+        android:alpha="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image2l"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
