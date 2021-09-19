@@ -1,11 +1,5 @@
 package com.example.work_byte;
 
-import static com.example.work_byte.Database.UserDetails.User.first_name;
-import static com.example.work_byte.Database.UserDetails.User.last_name;
-import static com.example.work_byte.Database.UserDetails.User.mobile;
-import static com.example.work_byte.Database.UserDetails.User.workArea;
-import static java.security.AccessController.getContext;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -18,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.work_byte.Database.DBHelper;
-import com.example.work_byte.Database.UserDetails;
 
 public class SignUpActivity extends AppCompatActivity{
 
@@ -79,13 +72,13 @@ public class SignUpActivity extends AppCompatActivity{
                             boolean insert = DB.insertData(f_name.getText().toString(), l_name.getText().toString() ,email.getText().toString(), m_number.getText().toString(), work_area.getText().toString(), password.getText().toString() ,re_password.getText().toString());
                             if (insert == false){
                                 Toast.makeText(SignUpActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                 startActivity(intent);
                             }else
                                 Toast.makeText(SignUpActivity.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
                         }else
                             Toast.makeText(SignUpActivity.this, "Registered Successfully.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                         startActivity(intent);
                     }else
                         Toast.makeText(SignUpActivity.this, "Passwords did not match", Toast.LENGTH_SHORT).show();
@@ -97,7 +90,7 @@ public class SignUpActivity extends AppCompatActivity{
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent (getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });

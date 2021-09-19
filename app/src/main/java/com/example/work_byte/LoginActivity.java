@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.example.work_byte.Database.DBHelper;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     EditText email, password;
     Button signin, signup;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         email = (EditText) findViewById(R.id.loginemailt);
         password = (EditText) findViewById(R.id.loginpasswordt);
@@ -40,15 +40,15 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if (loginemail.equals("") || pword.equals(""))
-                    Toast.makeText(MainActivity.this, "Please enter all fields.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please enter all fields.", Toast.LENGTH_SHORT).show();
                 else{
                     Boolean checkUserPass = DB.checkEmailPassword(loginemail,pword);
                     if (checkUserPass == true){
-                        Toast.makeText(MainActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), StartActivity.class);
                         startActivity(intent);
                     }else{
-                        Toast.makeText(MainActivity.this, "Invalid email or password!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Invalid email or password!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (MainActivity.this, SignUpActivity.class);
+                Intent intent = new Intent (LoginActivity.this, SignUpActivity.class);
                 startActivity(intent);
             }
         });

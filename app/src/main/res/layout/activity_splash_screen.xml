@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenActivity"
+    android:background="@drawable/splash_screen">
+
+
+
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/splashE"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.18"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/e" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/splashT"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.18"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/t" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/splashY"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.18"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/y" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/splashB"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.18"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/b" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/splashK"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.18"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/k" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/splashR"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.18"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/r" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/splashO"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.18"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/o" />-->
+
+    <!--    <TextView-->
+<!--        android:id="@+id/splashE"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="E"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.225"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/splashT"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="T"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.225"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/splashY"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="Y"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.225"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/splashB"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="B"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.225"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/splashK"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="K"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.225"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/splashR"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="R"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.225"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/splashO"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="O"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.225"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/splashW"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_width="47dp"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="W"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="50dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.225"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513" />-->
+
+    <ImageView
+        android:id="@+id/splashW"
+        android:layout_width="235dp"
+        android:layout_height="64dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.524"
+        app:srcCompat="@drawable/wbn" />
+
+    <ImageView
+        android:id="@+id/splashlogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513"
+        app:srcCompat="@drawable/welogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
