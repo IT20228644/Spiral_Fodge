@@ -4,10 +4,14 @@ import android.provider.BaseColumns;
 import android.widget.EditText;
 
 public final class UserDetails {
+//    public UserDetails(String first_name, EditText l_name, EditText email, EditText m_number, EditText work_area, EditText password, EditText re_password) {
+//    }
 
-    public UserDetails(EditText f_name, EditText l_name, EditText email, EditText m_number, EditText work_area, EditText password, EditText re_password){
-
-    }
+//    public UserDetails(EditText f_name, EditText l_name, EditText email, EditText m_number, EditText work_area, EditText password, EditText re_password){
+//
+//        String first_name = f_name.getText().toString();
+//
+//    }
 
     public static class User implements BaseColumns{
 

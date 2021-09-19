@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.loginpasswordt);
 
         signin = (Button) findViewById(R.id.btnsignin);
-        signup = (Button) findViewById(R.id.btnlogsignup);
+        signup = (Button) findViewById(R.id.btnlogsignin);
 
         DB = new DBHelper(this);
 

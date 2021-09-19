@@ -34,6 +34,7 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
+
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
     }
@@ -42,14 +43,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
             "CREATE TABLE " + UserDetails.User.TABLE_NAME + "("
                     + UserDetails.User.first_name + "," + UserDetails.User.last_name + " ,"
-                + UserDetails.User.email + "  PRIMARY KEY," + UserDetails.User.mobile + " ,"
-                + UserDetails.User.workArea + "," + UserDetails.User.password + ","
-                + UserDetails.User.re_password + ")";
+                    + UserDetails.User.email + "  PRIMARY KEY," + UserDetails.User.mobile + " ,"
+                    + UserDetails.User.workArea + "," + UserDetails.User.password + ","
+                    + UserDetails.User.re_password + ")";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + UserDetails.User.TABLE_NAME;
 
-    public boolean insertData(String f_name, String l_name, String email, String m_number, String work_area, String password, String re_password){
+    public boolean insertData(String f_name, String l_name, String email, String m_number, String work_area, String password, String re_password) {
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -71,6 +72,8 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+
+
 
 //    public List readAll (){
 //        SQLiteDatabase db = getReadableDatabase();
