@@ -1,5 +1,9 @@
 package com.example.work_byte;
 
+import static com.example.work_byte.Database.UserDetails.User.first_name;
+import static com.example.work_byte.Database.UserDetails.User.last_name;
+import static com.example.work_byte.Database.UserDetails.User.mobile;
+import static com.example.work_byte.Database.UserDetails.User.workArea;
 import static java.security.AccessController.getContext;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,10 +20,10 @@ import android.widget.Toast;
 import com.example.work_byte.Database.DBHelper;
 import com.example.work_byte.Database.UserDetails;
 
-public class SignUpActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity{
 
     EditText f_name, l_name, email, m_number, work_area, password, re_password;
-    Button sign_up;
+    Button sign_up, sign_in;
     DBHelper DB;
     private Context context;
 
@@ -36,6 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         re_password = findViewById(R.id.re_password);
         sign_up = findViewById(R.id.btnsignup);
+        sign_in = findViewById(R.id.btnlogsignin);
         DB = new DBHelper(this);
 
 
@@ -43,14 +48,6 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                DBHelper dbHelper = new DBHelper(getApplicationContext());
-                dbHelper.insertData(f_name.getText().toString(),
-                                    l_name.getText().toString(),
-                                    email.getText().toString(),
-                                    m_number.getText().toString(),
-                                    work_area.getText().toString(),
-                                    password.getText().toString(),
-                                    re_password.getText().toString());
 
 //                String fname = f_name.getText().toString();
 //                String lname = l_name.getText().toString();
@@ -60,14 +57,25 @@ public class SignUpActivity extends AppCompatActivity {
 //                String p_word = password.getText().toString();
 //                String re_p_word = re_password.getText().toString();
 
-                if (f_name.equals("") || l_name.equals("") || email.equals("") || m_number.equals("") || work_area.equals("") || password.equals("") || re_password.equals("")){
+                if (f_name.getText().toString().equals("") || l_name.getText().toString().equals("") || email.getText().toString().equals("") || m_number.getText().toString().equals("") || work_area.getText().toString().equals("") || password.getText().toString().equals("") || re_password.getText().toString().equals("")){
                     Toast.makeText(SignUpActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
                 }
                 else{
+                    DBHelper dbHelper = new DBHelper(getApplicationContext());
+                    dbHelper.insertData(f_name.getText().toString(),
+                            l_name.getText().toString(),
+                            email.getText().toString(),
+                            m_number.getText().toString(),
+                            work_area.getText().toString(),
+                            password.getText().toString(),
+                            re_password.getText().toString());
+
                     if (password.getText().toString().equals(re_password.getText().toString())){
                         Boolean usercheck = DB.checkUseremail(email.getText().toString());
                         if (usercheck == false){
-                            UserDetails newRowID = new UserDetails(f_name,l_name,email,m_number,work_area,password,re_password);
+//                            UserDetails.User newRowID = new UserDetails.User(f_name,l_name,
+//                                    email,m_number,work_area,
+//                                    password,re_password);
                             boolean insert = DB.insertData(f_name.getText().toString(), l_name.getText().toString() ,email.getText().toString(), m_number.getText().toString(), work_area.getText().toString(), password.getText().toString() ,re_password.getText().toString());
                             if (insert == false){
                                 Toast.makeText(SignUpActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
@@ -76,11 +84,21 @@ public class SignUpActivity extends AppCompatActivity {
                             }else
                                 Toast.makeText(SignUpActivity.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
                         }else
-                            Toast.makeText(SignUpActivity.this, "User already registered.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, "Registered Successfully.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
                     }else
                         Toast.makeText(SignUpActivity.this, "Passwords did not match", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        sign_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
     }
