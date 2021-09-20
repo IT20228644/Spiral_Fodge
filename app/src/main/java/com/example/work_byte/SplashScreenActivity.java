@@ -1,6 +1,7 @@
 package com.example.work_byte;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -33,19 +34,27 @@ public class SplashScreenActivity extends AppCompatActivity {
         splash_w = findViewById(R.id.splashW);
 
 
+        String text;
+
+        //determine the screen size
+        if ((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_LARGE){
+            text = "LargeScreen";
+        }
+
+
         //logo animation
-        scaleInAnimation = new ScaleAnimation(1,1f,1,1f,
+        scaleInAnimation = new ScaleAnimation(1,35f,1,35f,
                 Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-        scaleInAnimation.setDuration(800);
+        scaleInAnimation.setDuration(1200);
         scaleInAnimation.setFillAfter(true);
 
-        scaleOutAnimation = new ScaleAnimation(1f,1,1f,1,
+        scaleOutAnimation = new ScaleAnimation(35f,1,35f,1,
                 Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-        scaleOutAnimation.setDuration(800);
+        scaleOutAnimation.setDuration(1200);
         scaleOutAnimation.setFillAfter(true);
 
-        translateLogo = new TranslateAnimation(0,-177,0,0);
-        translateLogo.setDuration(800);
+        translateLogo = new TranslateAnimation(0,-300,0,0);
+        translateLogo.setDuration(1200);
 
         setLogo = new AnimationSet(true);
         setLogo.addAnimation(scaleOutAnimation);
@@ -56,10 +65,10 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         //text animation
         AlphaAnimation alphaAnimation = new AlphaAnimation(0,1);
-        alphaAnimation.setDuration(800);
+        alphaAnimation.setDuration(1200);
 
-        TranslateAnimation transW = new TranslateAnimation(0,57,0,0);
-        transW.setDuration(800);
+        TranslateAnimation transW = new TranslateAnimation(0,120,0,0);
+        transW.setDuration(1200);
 
 
         animSetTextW = new AnimationSet(true);
@@ -83,13 +92,15 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void onAnimationStart(Animation animation) {
 
+                splash_logo.startAnimation(setLogo);
+                splash_logo.setVisibility(View.VISIBLE);
 
             }
 
             @Override
             public void onAnimationEnd(Animation animation) {
 
-                splash_logo.startAnimation(setLogo);
+
 
             }
 
@@ -104,16 +115,27 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void onAnimationStart(Animation animation) {
 
-                splash_w.startAnimation(animSetTextW);
 
-                splash_w.setVisibility(View.VISIBLE);
 
             }
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Intent in = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(in);
+
+                splash_w.startAnimation(animSetTextW);
+
+                splash_w.setVisibility(View.VISIBLE);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Intent in = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(in);
+                    }
+                },2500);
+
+
             }
 
             @Override

@@ -8,13 +8,14 @@ android {
     defaultConfig {
         applicationId "com.example.work_byte"
         minSdk 22
-        targetSdk 31
+        targetSdk 27
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         targetSdkVersion 30
         minSdkVersion 27
+        multiDexEnabled true
     }
 
     buildTypes {
