@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WORK_BYTE">
         <activity
+            android:name=".HireDetail"
+            android:exported="true" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.work_byte.SplashScreenActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,12 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.work_byte.StartActivity"
+            android:name=".StartActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.work_byte.SignUpActivity"
+            android:name=".SignUpActivity"
             android:exported="true" />
-
     </application>
 
 </manifest>
