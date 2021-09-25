@@ -79,8 +79,8 @@ public class payment extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context, bank.class);
-                startActivity(intent);
+//                Intent intent=new Intent(context, bank.class);
+//                startActivity(intent);
             }
         });
 
