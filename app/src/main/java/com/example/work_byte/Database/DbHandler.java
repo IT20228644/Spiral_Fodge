@@ -127,25 +127,25 @@ public class DbHandler extends SQLiteOpenHelper {
 
     /*insert Data*/
 
-    public void addWorkerDetails(WorkerModel workerModel){
-
-        //write data into db
-        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
-
-        //create object to store all inserted data
-        ContentValues contentValues=new ContentValues();
-
-        //colomn names and values
-        contentValues.put(WORKER_NAME,workerModel.getWorkerName());
-        contentValues.put(SALARY,workerModel.getSalary());
-        contentValues.put(CATEGORY,workerModel.getCategory());
-
-        //save data to tables.use null to whenever colomn hasn't a value
-        sqLiteDatabase.insert(TABLE_NAME2,null,contentValues);
-
-        //close database
-        sqLiteDatabase.close();
-    }
+//    public void addWorkerDetails(WorkerModel workerModel){
+//
+//        //write data into db
+//        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+//
+//        //create object to store all inserted data
+//        ContentValues contentValues=new ContentValues();
+//
+//        //colomn names and values
+//        contentValues.put(WORKER_NAME,workerModel.getWorkerName());
+//        contentValues.put(SALARY,workerModel.getSalary());
+//        contentValues.put(CATEGORY,workerModel.getCategory());
+//
+//        //save data to tables.use null to whenever colomn hasn't a value
+//        sqLiteDatabase.insert(TABLE_NAME2,null,contentValues);
+//
+//        //close database
+//        sqLiteDatabase.close();
+//    }
 
 //    public boolean insertData(String name,int salary,String category){
 //        //write data into db
@@ -216,33 +216,33 @@ public class DbHandler extends SQLiteOpenHelper {
     /*get data*/
 
     //get all workers
-    public List<WorkerModel > getAllWorkers(String c){
-        List<WorkerModel> workers=new ArrayList<>();
-        SQLiteDatabase db=getReadableDatabase();
-        //String query=" SELECT * FROM "+TABLE_NAME2 ;
-       //Cursor cursor=db.rawQuery(query,null);
-        Cursor cursor=db.query(TABLE_NAME2,new String[]{WORKER_ID,WORKER_NAME,SALARY,CATEGORY},CATEGORY+ "=?",new String[]{c},null,null,null);
-
-        //check whether the table has data.go to first raw.if empty return false
-        if(cursor.moveToFirst()) {
-            do {
-                //create empty workerModel object
-                WorkerModel workerModel=new WorkerModel();
-
-                //set values
-                workerModel.setWorkerId(cursor.getInt(0));
-                workerModel.setWorkerName(cursor.getString(1));
-                workerModel.setSalary(cursor.getInt(2));
-                workerModel.setCategory(cursor.getString(3));
-
-
-                //add todoModel to the list type object
-                workers.add(workerModel);
-
-            } while(cursor.moveToNext());
-        }
-        return workers;
-    }
+//    public List<WorkerModel > getAllWorkers(String c){
+//        List<WorkerModel> workers=new ArrayList<>();
+//        SQLiteDatabase db=getReadableDatabase();
+//        //String query=" SELECT * FROM "+TABLE_NAME2 ;
+//       //Cursor cursor=db.rawQuery(query,null);
+//        Cursor cursor=db.query(TABLE_NAME2,new String[]{WORKER_ID,WORKER_NAME,SALARY,CATEGORY},CATEGORY+ "=?",new String[]{c},null,null,null);
+//
+//        //check whether the table has data.go to first raw.if empty return false
+//        if(cursor.moveToFirst()) {
+//            do {
+//                //create empty workerModel object
+//                WorkerModel workerModel=new WorkerModel();
+//
+//                //set values
+//                workerModel.setWorkerId(cursor.getInt(0));
+//                workerModel.setWorkerName(cursor.getString(1));
+//                workerModel.setSalary(cursor.getInt(2));
+//                workerModel.setCategory(cursor.getString(3));
+//
+//
+//                //add todoModel to the list type object
+//                workers.add(workerModel);
+//
+//            } while(cursor.moveToNext());
+//        }
+//        return workers;
+//    }
 
 //    public Cursor getAllData(){
 //        SQLiteDatabase db=getWritableDatabase();
@@ -355,22 +355,22 @@ public class DbHandler extends SQLiteOpenHelper {
     }
 
     //get single Worker
-    public WorkerModel getSingleWorker(int id){
-        SQLiteDatabase db=getWritableDatabase();
-        Cursor cursor=  db.query(TABLE_NAME2,new String[]{WORKER_ID,WORKER_NAME,SALARY,CATEGORY},WORKER_ID+"=?",new String[]{String.valueOf(id)},null,null,null);
-
-        WorkerModel workerModel;
-        if(cursor != null) {
-            cursor.moveToFirst();
-            workerModel = new WorkerModel(cursor.getInt(0),
-                    cursor.getString(1),
-                    cursor.getInt(2),
-                    cursor.getString(3));
-
-            return workerModel;
-        }
-        return  null;
-    }
+//    public WorkerModel getSingleWorker(int id){
+//        SQLiteDatabase db=getWritableDatabase();
+//        Cursor cursor=  db.query(TABLE_NAME2,new String[]{WORKER_ID,WORKER_NAME,SALARY,CATEGORY},WORKER_ID+"=?",new String[]{String.valueOf(id)},null,null,null);
+//
+//        WorkerModel workerModel;
+//        if(cursor != null) {
+//            cursor.moveToFirst();
+//            workerModel = new WorkerModel(cursor.getInt(0),
+//                    cursor.getString(1),
+//                    cursor.getInt(2),
+//                    cursor.getString(3));
+//
+//            return workerModel;
+//        }
+//        return  null;
+//    }
 
    /*update*/
 //    public boolean updateData(String id,String name,int salary,String category){

@@ -75,7 +75,7 @@ public class HireDetail extends AppCompatActivity {
         //HireModel hire=hires.get(position);//comes output as objects
         //WorkerModel worker=workers.get(position);//comes output as objects
 
-        Intent intent=new Intent(context,MainActivity.class);
+        Intent intent=new Intent(context,payment.class);
         intent.putExtra(EXTRA_MESSAGE,String.valueOf(uTime));
         //intent.putExtra("worker_id",String.valueOf(worker.getWorkerId()));
 
@@ -184,5 +184,4 @@ public class HireDetail extends AppCompatActivity {
 
 
 
-}
 }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WORK_BYTE">
         <activity
+            android:name=".payment"
+            android:exported="true" />
+        <activity
             android:name=".HireDetail"
             android:exported="true" />
         <activity
