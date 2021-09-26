@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package com.example.work_byte;
-=======
-package com.example.imagecrud;
->>>>>>> 6d94a05752b2b8345db5db48b451134849738bed
+package com.example.work_byte.Database;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -23,39 +19,37 @@ public class SQLiteHelper extends android.database.sqlite.SQLiteOpenHelper {
         database.execSQL(sql);
     }
 
-<<<<<<< HEAD
+
     public void insertData(String name, byte[] image){
 
         SQLiteDatabase database = getWritableDatabase();
         String sql = "INSERT INTO WORK VALUES (NULL, ?, ?)";
-=======
+
     public void insertData(String itemname, String discription, byte[] image, String phone, String price){
 
         SQLiteDatabase database = getWritableDatabase();
         String sql = "INSERT INTO FOOD VALUES (NULL, ?, ?, ?, ?, ?)";
->>>>>>> 6d94a05752b2b8345db5db48b451134849738bed
+
 
         SQLiteStatement statement = database.compileStatement(sql);
         statement.clearBindings();
 
-<<<<<<< HEAD
         statement.bindString(1, name);
         statement.bindBlob(2, image);
-=======
+
         statement.bindString(1, itemname);
         statement.bindString(2, discription);
         statement.bindBlob(3, image);
         statement.bindString(4, phone);
         statement.bindString(5, price);
 
->>>>>>> 6d94a05752b2b8345db5db48b451134849738bed
+
 
         statement.executeInsert();
 
     }
 
-<<<<<<< HEAD
-=======
+
     //Updating data into sqlite
     public void updateData(String itemname, String discription, byte[] image, String phone, String price, int id) {
         SQLiteDatabase database = getWritableDatabase();
@@ -89,7 +83,6 @@ public class SQLiteHelper extends android.database.sqlite.SQLiteOpenHelper {
     }
 
 
->>>>>>> 6d94a05752b2b8345db5db48b451134849738bed
     //get all data from database
     public Cursor getData(String sql){
 

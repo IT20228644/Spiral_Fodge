@@ -1,4 +1,4 @@
-package com.example.imagecrud;
+package com.example.work_byte;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,8 +16,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.work_byte.Database.SQLiteHelper;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;

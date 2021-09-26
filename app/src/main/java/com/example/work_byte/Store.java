@@ -1,4 +1,4 @@
-package com.example.imagecrud;
+package com.example.work_byte;
 
 public class Store {
 
