@@ -16,6 +16,8 @@ public class ReviewActivity extends AppCompatActivity {
     Button btnsubmit, btncancel;
     RatingBar ratingBar;
 
+
+
     float myRating = 0;
 
     @Override
