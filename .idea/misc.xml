@@ -3,15 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_login.xml" value="0.259375" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_main.xml" value="0.259375" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+<<<<<<< HEAD
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_splash_screen.xml" value="0.259375" />
         <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_review.xml" value="0.25" />
         <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
         <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_start.xml" value="0.16296296296296298" />
         <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_worker_profile.xml" value="0.178125" />
+=======
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge/app/src/main/res/drawable/ic_baseline_add_location_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge/app/src/main/res/layout/activity_bank_detail.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge/app/src/main/res/layout/activity_hire_detail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge/app/src/main/res/layout/activity_payment.xml" value="0.25416666666666665" />
+>>>>>>> 4be1ae819dfecf51cb1eaf5992787526b9e2b095
       </map>
     </option>
   </component>

@@ -10,7 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WORK_BYTE">
         <activity
+<<<<<<< HEAD
             android:name=".ReviewActivity"
+=======
+            android:name=".bankDetail"
+            android:exported="true" />
+        <activity
+            android:name=".payment"
+            android:exported="true" />
+        <activity
+            android:name=".HireDetail"
+>>>>>>> 4be1ae819dfecf51cb1eaf5992787526b9e2b095
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
@@ -30,8 +40,11 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="true" />
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4be1ae819dfecf51cb1eaf5992787526b9e2b095
     </application>
 
 </manifest>
