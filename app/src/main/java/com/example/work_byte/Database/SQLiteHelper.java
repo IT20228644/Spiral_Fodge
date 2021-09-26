@@ -19,23 +19,13 @@ public class SQLiteHelper extends android.database.sqlite.SQLiteOpenHelper {
         database.execSQL(sql);
     }
 
-
-    public void insertData(String name, byte[] image){
-
-        SQLiteDatabase database = getWritableDatabase();
-        String sql = "INSERT INTO WORK VALUES (NULL, ?, ?)";
-
     public void insertData(String itemname, String discription, byte[] image, String phone, String price){
 
         SQLiteDatabase database = getWritableDatabase();
         String sql = "INSERT INTO FOOD VALUES (NULL, ?, ?, ?, ?, ?)";
 
-
         SQLiteStatement statement = database.compileStatement(sql);
         statement.clearBindings();
-
-        statement.bindString(1, name);
-        statement.bindBlob(2, image);
 
         statement.bindString(1, itemname);
         statement.bindString(2, discription);
@@ -44,11 +34,9 @@ public class SQLiteHelper extends android.database.sqlite.SQLiteOpenHelper {
         statement.bindString(5, price);
 
 
-
         statement.executeInsert();
 
     }
-
 
     //Updating data into sqlite
     public void updateData(String itemname, String discription, byte[] image, String phone, String price, int id) {
