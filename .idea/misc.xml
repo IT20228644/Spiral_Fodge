@@ -23,6 +23,7 @@
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_my_works.xml" value="0.264" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_splash_screen.xml" value="0.259375" />
+<<<<<<< HEAD
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_start.xml" value="0.264" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_work_dashboard.xml" value="0.264" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_work_list.xml" value="0.259375" />
@@ -30,6 +31,18 @@
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_worker_view.xml" value="0.2453125" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/my_works_item_list.xml" value="0.264" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/menu/item_menu.xml" value="0.259375" />
+=======
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_bank_detail.xml" value="0.18541666666666667" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_bank_detail2.xml" value="0.18541666666666667" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_hire_detail.xml" value="0.18541666666666667" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_payment.xml" value="0.18541666666666667" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_review.xml" value="0.22" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_splash_screen.xml" value="0.18541666666666667" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_start.xml" value="0.16296296296296298" />
+        <entry key="..\:/mad/clone/Spiral_Fodge/app/src/main/res/layout/activity_worker_profile.xml" value="0.178125" />
+>>>>>>> 6d94a05752b2b8345db5db48b451134849738bed
       </map>
     </option>
   </component>

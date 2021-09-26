@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payment">
+
+
+
+
+    <TextView
+        android:id="@+id/paymentMethod_total"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="536dp"
+        android:text="@string/total"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/paymentMethod_advance"
+        android:layout_width="95dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/advance"
+        android:textColor="#090808"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethod_total" />
+
+    <TextView
+        android:id="@+id/paymentMethod_payMethods"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="388dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/payMethods"
+        android:textColor="#100F0F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/paymentMethod_topText"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:text="@string/topText"
+        android:textColor="#535050"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/paymentMethod_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/pay_img1"
+        android:layout_width="191dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethod_payMethods"
+        app:srcCompat="@drawable/pay_method1" />
+
+    <Button
+        android:id="@+id/payment_btn1"
+        android:layout_width="128dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#009688"
+        android:text="Pay with credit or debit"
+        app:layout_constraintStart_toEndOf="@+id/pay_img1"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethod_payMethods" />
+
+    <ImageView
+        android:id="@+id/pay_img2"
+        android:layout_width="188dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pay_img1"
+        app:srcCompat="@drawable/pay_method2new" />
+
+    <Button
+        android:id="@+id/payment_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#009688"
+        android:text="Bank Transfer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_btn1" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/paymentMethod_total"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethod_topText" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/paymentMethod_payMethods"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/paymentMethod_advance" />
+</androidx.constraintlayout.widget.ConstraintLayout>
