@@ -7,7 +7,7 @@
     tools:context=".StartActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profile_image"
         android:layout_width="158dp"
         android:layout_height="158dp"
         android:layout_marginTop="44dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/workbytel" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_as_visit"
         android:layout_width="264dp"
         android:layout_height="49dp"
         android:layout_marginTop="80dp"
@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.486" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_as_work"
         android:layout_width="264dp"
         android:layout_height="49dp"
         android:layout_marginTop="80dp"

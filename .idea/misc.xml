@@ -3,10 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MAD/work_byte/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.2755208333333333" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2755208333333333" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/drawable/ic_baseline_description_24.xml" value="0.2755208333333333" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/drawable/ic_baseline_map_24.xml" value="0.2755208333333333" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.2755208333333333" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/drawable/item_selector.xml" value="0.1" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/drawable/progress_circle.xml" value="0.2755208333333333" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/drawable/round_corner.xml" value="0.2755208333333333" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_edit_profile.xml" value="0.2" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_edit_work_prodile.xml" value="0.264" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_edit_work_profile.xml" value="0.264" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_edit_work_profile2.xml" value="0.259375" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_login.xml" value="0.259375" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_login2.xml" value="0.259375" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_main.xml" value="0.259375" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_my_item.xml" value="0.259375" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_my_work_edit.xml" value="0.264" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_my_works.xml" value="0.264" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_splash_screen.xml" value="0.259375" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_start.xml" value="0.264" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_work_dashboard.xml" value="0.264" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_work_list.xml" value="0.259375" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_worker_dashboard.xml" value="0.264" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/activity_worker_view.xml" value="0.2453125" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/layout/my_works_item_list.xml" value="0.264" />
+        <entry key="..\:/MAD/work_byte/app/src/main/res/menu/item_menu.xml" value="0.259375" />
       </map>
     </option>
   </component>

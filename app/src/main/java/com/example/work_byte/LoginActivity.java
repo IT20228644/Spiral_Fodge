@@ -17,6 +17,9 @@ public class LoginActivity extends AppCompatActivity {
     Button signin, signup;
     DBHelper DB;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +47,9 @@ public class LoginActivity extends AppCompatActivity {
                 else{
                     Boolean checkUserPass = DB.checkEmailPassword(loginemail,pword);
                     if (checkUserPass == true){
+
                         Toast.makeText(LoginActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), WorkerViewActivity.class);
                         startActivity(intent);
                     }else{
                         Toast.makeText(LoginActivity.this, "Invalid email or password!", Toast.LENGTH_SHORT).show();
