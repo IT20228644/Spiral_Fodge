@@ -15,11 +15,6 @@ public class StartActivity extends AppCompatActivity {
 
     Button as_work, as_visit;
 
-    private Context context;
-
-    public Button button;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,13 +39,6 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(StartActivity.this,ReviewActivity.class);
-                startActivity(intent);
-            }
-        });
 
     }
 

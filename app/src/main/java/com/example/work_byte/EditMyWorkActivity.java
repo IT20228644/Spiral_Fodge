@@ -18,7 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.example.work_byte.Database.SQLiteHandler;
+import com.example.work_byte.Database.SQLiteMyWorkHandler;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -32,7 +32,7 @@ public class EditMyWorkActivity extends AppCompatActivity {
 
     final int REQUEST_CODE_GALLERY = 999;
 
-    public static SQLiteHandler sqLiteHelper;
+    public static SQLiteMyWorkHandler sqLiteMyWorkHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +41,9 @@ public class EditMyWorkActivity extends AppCompatActivity {
 
         init();
 
-        sqLiteHelper = new SQLiteHandler(this, "work_byte.db", null, 1 );
+        sqLiteMyWorkHandler = new SQLiteMyWorkHandler(this, "work_byte.db", null, 1 );
 
-        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS WORK (Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, image BLOG)");
+        sqLiteMyWorkHandler.queryData("CREATE TABLE IF NOT EXISTS WORK (Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, image BLOG)");
 
         //Add Image
         btnChoose.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +62,7 @@ public class EditMyWorkActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    sqLiteHelper.insertData(
+                    sqLiteMyWorkHandler.insertData(
                             edtName.getText().toString().trim(),
                             imageViewToByte(imageView)
                     );
