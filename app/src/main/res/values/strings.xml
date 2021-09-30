@@ -52,5 +52,6 @@
     <string name="contract">contract</string>
     <string name="bottmText">Work byte will resolve the problem within one week</string>
     <string name="confirm">Confirm cancal</string>
+    <string name="showmylist">showmylist</string>
 
 </resources>
