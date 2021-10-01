@@ -28,6 +28,7 @@ public class StartActivity extends AppCompatActivity {
         as_work = findViewById(R.id.btn_as_work);
         as_visit = findViewById(R.id.btn_as_visit);
 
+
         as_work.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,13 +45,13 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(StartActivity.this,ReviewActivity.class);
-                startActivity(intent);
-            }
-        });
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent= new Intent(StartActivity.this,ReviewActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 
