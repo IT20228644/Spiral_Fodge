@@ -28,10 +28,9 @@
         <activity
             android:name=".EditWorkProfileActivity"
             android:exported="true" />
-<<<<<<< HEAD
+
         <activity
-=======
->>>>>>> 30c71ec978c6368d8b7a7cdab94606f2aafe7e4a
+
             android:exported="true"
             android:name=".ReviewActivity" />
         <activity
@@ -39,10 +38,10 @@
             android:exported="true" />
         <activity
             android:name=".HireDetail"/>
-<<<<<<< HEAD
-=======
 
->>>>>>> 30c71ec978c6368d8b7a7cdab94606f2aafe7e4a
+
+
+
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
