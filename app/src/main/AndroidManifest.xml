@@ -30,10 +30,6 @@
 
 
         <activity
-
-            android:exported="true"
-            android:name=".ReviewActivity" />
-        <activity
             android:name=".payment"
             android:exported="true" />
         <activity
