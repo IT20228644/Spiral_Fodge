@@ -18,6 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+//import com.example.work_byte.Database.SQLiteHandler;
+
 import com.example.work_byte.Database.SQLiteHandler;
 
 import java.io.ByteArrayOutputStream;
@@ -43,7 +45,7 @@ public class EditMyWorkActivity extends AppCompatActivity {
 
         sqLiteHelper = new SQLiteHandler(this, "work_byte.db", null, 1 );
 
-        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS WORK (Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, image BLOG)");
+        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS WORKS (Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, image BLOG)");
 
         //Add Image
         btnChoose.setOnClickListener(new View.OnClickListener() {

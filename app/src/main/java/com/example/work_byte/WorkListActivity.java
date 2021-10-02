@@ -28,12 +28,12 @@ public class WorkListActivity extends AppCompatActivity {
         gridView.setAdapter(adapter);
 
         // get all data from sqlite
-        Cursor cursor = EditMyWorkActivity.sqLiteHelper.getData("SELECT * FROM WORK");
-        list.clear();
-        while (cursor.moveToNext()) {
+        Cursor cursor = EditMyWorkActivity.sqLiteHelper.getData("SELECT * FROM WORKS");
+       list.clear();
+       while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
             String name = cursor.getString(1);
-            byte[] image = cursor.getBlob(2);
+           byte[] image = cursor.getBlob(2);
 
             list.add(new Work(name, image, id));
         }

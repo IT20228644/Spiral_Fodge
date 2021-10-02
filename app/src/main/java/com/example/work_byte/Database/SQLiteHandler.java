@@ -30,7 +30,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         statement.clearBindings();
 
         statement.bindString(1, name);
-        statement.bindBlob(3, image);
+        statement.bindBlob(2, image);
 
         statement.executeInsert();
 
