@@ -1,4 +1,4 @@
-<?xml version="1.0"  encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.work_byte">
 
@@ -12,6 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WORK_BYTE">
+        <activity
+            android:name=".AddWorker"
+            android:exported="true" />
+        <activity
+            android:name=".wor_profileNew"
+            android:exported="true" />
+        <activity
+            android:name=".MasonList"
+            android:exported="true" />
+        <activity
+            android:name=".Category"
+            android:exported="true" />
         <activity
             android:name=".WorkerDashboardActivity"
             android:exported="true" />
@@ -27,18 +39,10 @@
         <activity
             android:name=".EditWorkProfileActivity"
             android:exported="true" />
-
-
         <activity
             android:name=".payment"
             android:exported="true" />
-        <activity
-            android:name=".HireDetail"/>
-
-
-
-
-
+        <activity android:name=".HireDetail" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
