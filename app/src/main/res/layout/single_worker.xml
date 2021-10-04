@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+
+        android:id="@+id/rowImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/prooo" />
+
+    <TextView
+
+        android:id="@+id/rowName"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/rowImage"
+        android:text="Name" />
+
+
+    <!--    <ImageView-->
+
+    <!--        android:id="@+id/next"-->
+    <!--        android:layout_width="20dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_marginStart="250dp"-->
+    <!--        android:layout_marginLeft="210dp"-->
+    <!--        android:layout_marginEnd="0dp"-->
+    <!--        android:layout_toRightOf="@+id/image"-->
+    <!--        android:src="@drawable/ic_next" />-->
+
+
+    <TextView
+        android:id="@+id/rowPrice"
+        style="@style/TextAppearance.AppCompat"
+        android:layout_width="131dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/rowName"
+        android:layout_marginStart="168dp"
+
+        android:layout_marginLeft="10dp"
+
+        android:layout_marginTop="46dp"
+        android:layout_toEndOf="@+id/rowImage"
+        android:text="rate"
+        android:textSize="16sp" />
+
+
+    <ImageView
+        android:id="@+id/ratting"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/rowName"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@+id/rowImage"
+        android:src="@drawable/ratting2" />
+
+    <TextView
+        android:id="@+id/rowCategory"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="79dp"
+        android:layout_toRightOf="@+id/rowImage"
+        android:maxLength="50"
+        android:singleLine="true"
+        android:text="Des" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        app:srcCompat="@drawable/ic_next" />
+
+
+</RelativeLayout>
