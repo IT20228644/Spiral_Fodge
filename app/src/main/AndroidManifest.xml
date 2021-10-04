@@ -28,6 +28,17 @@
             android:name=".EditWorkProfileActivity"
             android:exported="true" />
 
+
+        <activity
+            android:name=".payment"
+            android:exported="true" />
+        <activity
+            android:name=".HireDetail"/>
+
+
+
+
+
         <activity
             android:name=".LoginActivity"
             android:exported="true" />

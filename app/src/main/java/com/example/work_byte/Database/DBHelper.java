@@ -36,6 +36,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
 
+
     }
 
     @Override
@@ -61,6 +62,8 @@ public class DBHelper extends SQLiteOpenHelper {
                     + UserDetails.User.category + " NOT NULL," + UserDetails.User.experience + " NOT NULL" +")";
 
     private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + TABLE_NAME;
+
+
 
     public boolean insertData(String f_name, String l_name, String email, String m_number, String work_area, String password, String re_password, String address, String experience, String category) {
         // Gets the data repository in write mode
