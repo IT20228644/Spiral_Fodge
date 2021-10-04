@@ -59,7 +59,8 @@ public class DBHelper extends SQLiteOpenHelper {
                     + UserDetails.User.email + "  NOT NULL PRIMARY KEY," + UserDetails.User.mobile + "  NOT NULL,"
                     + UserDetails.User.workArea + " NOT NULL," + UserDetails.User.password + " NOT NULL,"
                     + UserDetails.User.re_password + " NOT NULL,"  + UserDetails.User.address + " NOT NULL,"
-                    + UserDetails.User.category + " NOT NULL," + UserDetails.User.experience + " NOT NULL" +")";
+                    + UserDetails.User.category + " NOT NULL," + UserDetails.User.experience + " NOT NULL,"
+                    + UserDetails.User.pro_image + " NOT NULL" +")";
 
     private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + TABLE_NAME;
 

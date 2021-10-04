@@ -35,13 +35,12 @@ public class StartActivity extends AppCompatActivity {
         as_visit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_visit = new Intent(getApplicationContext(),EditMyWorkActivity.class);
+                Intent intent_visit = new Intent(getApplicationContext(),EditWorkProfileActivity.class);
                 startActivity(intent_visit);
             }
         });
 
-<<<<<<< HEAD
-=======
+
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -49,8 +48,6 @@ public class StartActivity extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
->>>>>>> e574bad85408c506f547c3448bdc1f5fbcf76313
-
     }
 
 }

@@ -33,7 +33,7 @@ public class SignUpActivity extends AppCompatActivity{
         m_number = findViewById(R.id.m_number);
         work_area = findViewById(R.id.work_area);
         password = findViewById(R.id.password);
-        re_password = findViewById(R.id.categoryin);
+        re_password = findViewById(R.id.re_password);
         address = findViewById(R.id.address);
         experience = findViewById(R.id.experience);
         sign_up = findViewById(R.id.btnsignup);
