@@ -40,7 +40,7 @@ public class StartActivity extends AppCompatActivity {
         as_visit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_visit = new Intent(getApplicationContext(),EditMyWorkActivity.class);
+                Intent intent_visit = new Intent(getApplicationContext(),Category.class);
                 startActivity(intent_visit);
             }
         });

@@ -43,7 +43,7 @@ public class EditMyWorkActivity extends AppCompatActivity {
 
         init();
 
-        sqLiteHelper = new SQLiteHandler(this, "work_byte.db", null, 1 );
+        sqLiteHelper = new SQLiteHandler(this, "work_byte.db", null, 2 );
 
         sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS WORKS (Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, image BLOG)");
 

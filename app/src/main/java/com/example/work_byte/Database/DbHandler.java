@@ -463,4 +463,10 @@ public class DbHandler extends SQLiteOpenHelper {
 
     }
 
+//    public Cursor getAll(){
+//        SQLiteDatabase db=this.getWritableDatabase();
+//        Cursor c=db.rawQuery("select * from "+TABLE_NAME2,null);
+//        return c;
+//    }
+
 }

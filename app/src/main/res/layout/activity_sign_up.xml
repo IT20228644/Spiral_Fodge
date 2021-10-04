@@ -44,7 +44,7 @@
     <Button
         android:id="@+id/btnlogsignin"
         android:layout_width="94dp"
-        android:layout_height="19dp"
+        android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/buttonshape"
@@ -127,7 +127,7 @@
         app:layout_constraintVertical_bias="0.491" />
 
     <EditText
-        android:id="@+id/experience2"
+        android:id="@+id/category"
         android:layout_width="323dp"
         android:layout_height="52dp"
         android:hint="Working Category"
@@ -200,7 +200,7 @@
         app:layout_constraintVertical_bias="0.182" />
 
     <EditText
-        android:id="@+id/categoryin"
+        android:id="@+id/repassword"
         android:layout_width="323dp"
         android:layout_height="52dp"
         android:hint="Re-Type Password"
