@@ -93,7 +93,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.282"
-        tools:ignore="OnClick" />
+        tools:ignore="OnClick"
+        app:backgroundTint="@null"/>
 
     <Button
         android:id="@+id/btnList"
@@ -114,7 +115,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.634"
-        tools:ignore="OnClick" />
+        tools:ignore="OnClick"
+         app:backgroundTint="@null"/>
 
     <Button
         android:id="@+id/btnAdd"
@@ -135,7 +137,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.634"
-        tools:ignore="OnClick" />
+        tools:ignore="OnClick"
+        app:backgroundTint="@null"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="335dp"

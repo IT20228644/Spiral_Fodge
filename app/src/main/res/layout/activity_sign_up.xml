@@ -25,7 +25,8 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintVertical_bias="0.877"
+        app:backgroundTint="@null"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -60,7 +61,8 @@
         app:layout_constraintHorizontal_bias="0.689"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.95"
+        app:backgroundTint="@null"/>
 
     <ImageView
         android:id="@+id/imageView4"

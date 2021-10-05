@@ -57,16 +57,26 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/drawable/ic_baseline_horizontal_rule_24.xml" value="0.2703125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2703125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/drawable/ic_baseline_sms_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout-w936dp/update_myworks.xml" value="0.190625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_add_hire_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_bank_detail.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_bank_transfer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_edit_work_profile.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_hire_detail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_my_disputes.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_my_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_my_work_edit.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_payment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_start.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_update_hire.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_wor_profile_new.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_work_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_worker_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/activity_worker_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/my_works_item_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge old/app/src/main/res/layout/single_worker.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Spiral_Fodge/app/src/main/res/drawable/indicator_selector.xml" value="0.14635416666666667" />
       </map>
     </option>
