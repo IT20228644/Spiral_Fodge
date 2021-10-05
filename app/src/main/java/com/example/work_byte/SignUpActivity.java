@@ -38,10 +38,17 @@ public class SignUpActivity extends AppCompatActivity{
         m_number = findViewById(R.id.m_number);
         uwork_area = findViewById(R.id.work_area);
         upassword = findViewById(R.id.password);
-        ure_password = findViewById(R.id.repassword);
+        ure_password = findViewById(R.id.re_password);
         uaddress = findViewById(R.id.address);
         uexperience = findViewById(R.id.experience);
-        ucategory = findViewById(R.id.category);
+        ucategory=findViewById(R.id.categoryin);
+
+//        work_area = findViewById(R.id.work_area);
+//        password = findViewById(R.id.password);
+//        re_password = findViewById(R.id.re_password);
+//        address = findViewById(R.id.address);
+//        experience = findViewById(R.id.experience);
+
         sign_up = findViewById(R.id.btnsignup);
         sign_in = findViewById(R.id.btnlogsignin);
         workers=new ArrayList<>();

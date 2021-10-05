@@ -206,6 +206,15 @@ public class UserDetails {
         public static  String first_name = "f_name";
         public static  String last_name = "l_name";
         public static  String email = "email";
+
+        public static String getPro_image() {
+            return pro_image;
+        }
+
+        public static void setPro_image(String pro_image) {
+            User.pro_image = pro_image;
+        }
+
         public static  String mobile = "m_number";
         public static  String workArea = "work_area";
         public static  String password = "password";
@@ -213,6 +222,7 @@ public class UserDetails {
         public static  String address = "address";
         public static  String experience = "experience";
         public static  String category = "category";
+        public static String pro_image = "pro_image";
     }
 
 
