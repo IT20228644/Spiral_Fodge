@@ -43,18 +43,12 @@ public class SignUpActivity extends AppCompatActivity{
         uexperience = findViewById(R.id.experience);
         ucategory=findViewById(R.id.categoryin);
 
-//        work_area = findViewById(R.id.work_area);
-//        password = findViewById(R.id.password);
-//        re_password = findViewById(R.id.re_password);
-//        address = findViewById(R.id.address);
-//        experience = findViewById(R.id.experience);
-
         sign_up = findViewById(R.id.btnsignup);
         sign_in = findViewById(R.id.btnlogsignin);
         workers=new ArrayList<>();
 
         DB = new DBHelper(this);
-        workers=DB.getAllWorkers();
+        //workers=DB.getAllWorkers();
 
 
         sign_up.setOnClickListener(new View.OnClickListener() {
@@ -94,10 +88,7 @@ public class SignUpActivity extends AppCompatActivity{
                                 Toast.makeText(SignUpActivity.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
                         }else
                             Toast.makeText(SignUpActivity.this, "Registered Successfully.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), wor_profileNew.class);
-                        String mail=uemail.getText().toString();
-                        intent.putExtra("worker_id",mail);
-                        startActivity(intent);
+
 
                     }else
                         Toast.makeText(SignUpActivity.this, "Passwords did not match", Toast.LENGTH_SHORT).show();

@@ -322,7 +322,7 @@
 
         android:id="@+id/button"
         android:layout_width="286dp"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginTop="496dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
@@ -357,7 +357,7 @@
 
     <Button
 
-        android:id="@+id/button2"
+        android:id="@+id/hireMe"
         android:layout_width="130dp"
         android:layout_height="49dp"
         android:layout_marginTop="560dp"
@@ -386,7 +386,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.83"
-        app:srcCompat="@drawable/ic_baseline_message_24" />
+        app:srcCompat="@drawable/ic_baseline_message_24"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton2"
@@ -400,6 +401,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.83"
-        app:srcCompat="@drawable/ic_baseline_local_phone_24" />
+        app:srcCompat="@drawable/ic_baseline_local_phone_24"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

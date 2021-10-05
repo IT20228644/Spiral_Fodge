@@ -3,8 +3,10 @@ package com.example.work_byte;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ public class wor_profileNew extends AppCompatActivity {
     private TextView ufirstnameview, ulastnameview, uemailview, uworkareaview, uteleview, uexperenceview,udes;
     private DBHelper dbHelper;
     private Context context;
+    Button btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class wor_profileNew extends AppCompatActivity {
         uteleview = findViewById(R.id.tele_view);
         uexperenceview = findViewById(R.id.experience_view);
         udes=findViewById(R.id.des_view);
+        btn1=findViewById(R.id.hireMe);
 
         //catch the values coming from relavent d
         final String worker_id=getIntent().getStringExtra("worker_id");
@@ -47,6 +51,17 @@ public class wor_profileNew extends AppCompatActivity {
         uteleview.setText(workerModel.getMobile());
         uexperenceview.setText(workerModel.getExperience());
         udes.setText(workerModel.getCategory());
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context,AddHireDetail.class);
+                //intent.putExtra("data1",String.valueOf(workerModel.getSalary()));
+                intent.putExtra("worker",workerModel.getFirst_name());
+
+                startActivity(intent);
+            }
+        });
 
 
     }

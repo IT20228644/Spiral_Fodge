@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WORK_BYTE">
         <activity
+            android:name=".BankTransfer"
+            android:exported="true" />
+        <activity
+            android:name=".Payment"
+            android:exported="true" />
+        <activity
+            android:name=".AddHireDetail"
+            android:exported="true" />
+        <activity
             android:name=".AddWorker"
             android:exported="true" />
         <activity

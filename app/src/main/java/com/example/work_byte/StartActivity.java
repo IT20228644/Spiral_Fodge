@@ -36,9 +36,9 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Intent intent_visit = new Intent(getApplicationContext(),Category.class);
+                Intent intent_visit = new Intent(getApplicationContext(),Category.class);
 
-                Intent intent_visit = new Intent(getApplicationContext(),EditWorkProfileActivity.class);
+                //Intent intent_visit = new Intent(getApplicationContext(),EditWorkProfileActivity.class);
 
                 startActivity(intent_visit);
             }

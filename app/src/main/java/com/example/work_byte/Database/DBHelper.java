@@ -29,23 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
-    // If you change the database schema, you must increment the database version.
-//    public static final int DATABASE_VERSION = 1;
-//    public static final String DATABASE_NAME = "work_byte.db";
-
-//        public static final String TABLE_NAME = "users";
-//
-//        public static  String userId = "userId";
-//        public static  String first_name = "f_name";
-//        public static  String last_name = "l_name";
-//        public static  String uemail = "email";
-//        public static  String mobile = "m_number";
-//        public static  String workArea = "work_area";
-//        public static  String password = "password";
-//        public static  String re_password = "re_password";
-//        public static  String address = "address";
-//        public static  String experience = "experience";
-//        public static  String category = "category";
 
     public DBHelper(Context context) {
         super(context, "work_byte.db", null, 1);
@@ -54,24 +37,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
-        //table creation query
-//        String TABLE_CREATE_QUERY="CREATE TABLE "+TABLE_NAME+" "+
-//                " ("
-//                +userId+" INTEGER PRIMARY KEY "+" AUTOINCREMENT,"
-//                +first_name+ " TEXT,"
-//                +last_name+ " TEXT,"
-//                +uemail+ " TEXT ,"
-//                +mobile+ " TEXT ,"
-//                +workArea+ " TEXT ,"
-//                +password+ " TEXT ,"
-//                +re_password+ " TEXT ,"
-//                +address+ " TEXT ,"
-//                +experience+ " TEXT, "
-//                +category+ " TEXT "+
-//
-//                ");";//sql semi colon and java semi colon
 
-       // db.execSQL(TABLE_CREATE_QUERY);
     }
 
     @Override
@@ -278,191 +244,18 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-//    public boolean insertData(String f_name, String l_name, String email, String m_number, String work_area, String upassword, String ure_password, String uaddress, String uexperience, String ucategory) {
-//    // Gets the data repository in write mode
-//    SQLiteDatabase db = this.getWritableDatabase();
-//
-//// Create a new map of values, where column names are the keys
-//    ContentValues values = new ContentValues();
-//    values.put(first_name, f_name);
-//    values.put(last_name, l_name);
-//    values.put(uemail, email);
-//    values.put(mobile, m_number);
-//    values.put(workArea, work_area);
-//    values.put(password, upassword);
-//    values.put(re_password, ure_password);
-//    values.put(address, uaddress);
-//    values.put(experience, uexperience);
-//    values.put(category, ucategory);
-//
-//
-//
-//// Insert the new row, returning the primary key value of the new row
-//    long result = db.insert(TABLE_NAME, String.valueOf(values), values);
-//    if (result == -1)
-//        return false;
-//    else
-//        return true;
-//}
-//
-//    public List readAllInfo(){
-//        SQLiteDatabase db = getReadableDatabase();
-//
-//
-//
-//// Define a projection that specifies which columns from the database
-//// you will actually use after this query.
-//        String[] projection = {
-//                BaseColumns._ID,
-//                first_name,
-//                last_name,
-//                uemail,
-//                mobile,
-//                workArea,
-//                address,
-//                experience
-//        };
-//
-//// Filter results WHERE "title" = 'My Title'
-//        String selection = uemail + " LIKE ?";
-////        String[] selectionArgs = { email };
-//
-//// How you want the results sorted in the resulting Cursor
-//        String sortOrder = uemail + " DESC";
-//
-//        Cursor cursor = db.query(
-//                TABLE_NAME,   // The table to query
-//                projection,             // The array of columns to return (pass null to get all)
-//                null,              // The columns for the WHERE clause
-//                null,          // The values for the WHERE clause
-//                null,                   // don't group the rows
-//                null,                   // don't filter by row groups
-//                sortOrder               // The sort order
-//        );
-//
-//        List useremails = new ArrayList<>();
-//        while(cursor.moveToNext()) {
-//            String user = cursor.getString(cursor.getColumnIndexOrThrow(uemail));
-//            useremails.add(user);
-//
-//        }
-//        cursor.close();
-//        return useremails;
-//    }
-//
-//    public List readAllInfo (String email){
-//        SQLiteDatabase db = getReadableDatabase();
-//
-//// Define a projection that specifies which columns from the database
-//// you will actually use after this query.
-//        String[] projection = {
-//                first_name,
-//                last_name,
-//                uemail,
-//                mobile,
-//                workArea,
-//                address,
-//                experience
-//        };
-//
-//// Filter results WHERE "title" = 'My Title'
-//        String selection = email + " =?";
-//        String[] selectionArgs = { email };
-//
-//// How you want the results sorted in the resulting Cursor
-//        String sortOrder = email + " DESC";
-//
-//        Cursor cursor = db.query(
-//                TABLE_NAME,   // The table to query
-//                projection,             // The array of columns to return (pass null to get all)
-//                selection,              // The columns for the WHERE clause
-//                selectionArgs,          // The values for the WHERE clause
-//                null,                   // don't group the rows
-//                null,                   // don't filter by row groups
-//                sortOrder               // The sort order
-//        );
-//
-//        List userInfo = new ArrayList<>();
-//        while(cursor.moveToNext()) {
-//            String Emailv = cursor.getString(cursor.getColumnIndexOrThrow(uemail));
-//            String workAreav = cursor.getString(cursor.getColumnIndexOrThrow(workArea));
-//            String Experiencev = cursor.getString(cursor.getColumnIndexOrThrow(experience));
-//            String telev = cursor.getString(cursor.getColumnIndexOrThrow(mobile));
-//            String addressv = cursor.getString(cursor.getColumnIndexOrThrow(address));
-//            String pwordv = cursor.getString(cursor.getColumnIndexOrThrow(password));
-//            String repwordv= cursor.getString(cursor.getColumnIndexOrThrow(re_password));
-//            userInfo.add(Emailv); //0
-//            userInfo.add(workAreav);//1
-//            userInfo.add(Experiencev);//2
-//            userInfo.add(telev);//3
-//            userInfo.add(addressv);//4
-//            userInfo.add(pwordv);//5
-//            userInfo.add(repwordv);//6
-//
-//        }
-//        cursor.close();
-//        return userInfo;
-//    }
-//
-//    public Boolean updateInfo (String email, String work_area, String m_number, String upassword, String ure_password, String uaddress, String uexperience){
-//        SQLiteDatabase db = getWritableDatabase();
-//
-//// New value for one column
-//        ContentValues values = new ContentValues();
-//        values.put(workArea, work_area);
-//        values.put(mobile, m_number);
-//        values.put(password, upassword);
-//        values.put(re_password, ure_password);
-//        values.put(address, uaddress);
-//        values.put(experience, uexperience);
-//
-//
-//// Which row to update, based on the title
-//        String selection = uemail + " LIKE ?";
-//        String[] selectionArgs = { uemail };
-//
-//        int count = db.update(
-//                TABLE_NAME,
-//                values,
-//                selection,
-//                selectionArgs);
-//
-//        if (count > 0 )
-//            return true;
-//        else
-//            return false;
-//    }
-//
-//
-//
-//
-//    public boolean checkUseremail (String email){
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        Cursor cursor = db.rawQuery("Select * from users where email = ?", new String[] {email});
-//        if (cursor.getCount() > 0)
-//            return true;
-//        else
-//            return false;
-//    }
-//
-//
-//    public boolean checkEmailPassword(String email, String password){
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        Cursor cursor = db.rawQuery("Select * from users where email = ? and password =?", new String[] {email, password});
-//        if (cursor.getCount() > 0)
-//            return true;
-//        else
-//            return  false;
-//    }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //get all workers as list when click category
-    public List<UserDetails> getAllWorkers(){
+    public List<UserDetails> getAllWorkers(String category){
     List<UserDetails> workers=new ArrayList<>();
     SQLiteDatabase db=getReadableDatabase();
-    String query=" SELECT * FROM "+UserDetails.User.TABLE_NAME ;
-    Cursor cursor=db.rawQuery(query,null);
-    //Cursor cursor=db.query(TABLE_NAME,new String[]{first_name,last_name,uemail,mobile,workArea,experience,category},category+ "=?",new String[]{c},null,null,null);
+    //String query=" SELECT * FROM "+UserDetails.User.TABLE_NAME ;
+    //Cursor cursor=db.rawQuery(query,null);
+    Cursor cursor=db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
+            UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
+            UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
+            UserDetails.User.experience,UserDetails.User.category},category+ "=?",new String[]{category},null,null,null);
 
     //check whether the table has data.go to first raw.if empty return false
     if(cursor.moveToFirst()) {
@@ -487,7 +280,7 @@ public class DBHelper extends SQLiteOpenHelper {
             //add todoModel to the list type object
             workers.add(workerModel);
 
-        } while(cursor.moveToNext());
+        }while(cursor.moveToNext());
     }
     return workers;
 }

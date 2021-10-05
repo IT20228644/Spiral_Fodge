@@ -35,7 +35,7 @@ public class MasonList extends AppCompatActivity {
         dbHandler=new DBHelper(context);
 
         //get all masons
-        workers=dbHandler.getAllWorkers();
+        workers=dbHandler.getAllWorkers("Mason");
 
 
         //get the adapter
