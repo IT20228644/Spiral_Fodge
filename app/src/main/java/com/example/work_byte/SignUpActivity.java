@@ -19,7 +19,7 @@ import java.util.List;
 
 public class SignUpActivity extends AppCompatActivity{
 
-    EditText f_name, l_name, uemail, m_number, uwork_area, upassword, ure_password, uaddress, uexperience, ucategory;
+    EditText f_name, l_name, uemail, m_number, uwork_area, upassword, ure_password, uaddress, uexperience, ucategory,usal;
     Button sign_up, sign_in;
     DBHelper DB;
     private List<UserDetails> workers;
@@ -42,6 +42,7 @@ public class SignUpActivity extends AppCompatActivity{
         uaddress = findViewById(R.id.address);
         uexperience = findViewById(R.id.experience);
         ucategory=findViewById(R.id.categoryin);
+        usal=findViewById(R.id.salary);
 
         sign_up = findViewById(R.id.btnsignup);
         sign_in = findViewById(R.id.btnlogsignin);
@@ -55,7 +56,7 @@ public class SignUpActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                if (f_name.getText().toString().equals("") || l_name.getText().toString().equals("") || uemail.getText().toString().equals("") || m_number.getText().toString().equals("") || uwork_area.getText().toString().equals("") || upassword.getText().toString().equals("") || ure_password.getText().toString().equals("") || uaddress.getText().toString().equals("") || uexperience.getText().toString().equals("") || ucategory.getText().toString().equals("")){
+                if (f_name.getText().toString().equals("") || l_name.getText().toString().equals("") || uemail.getText().toString().equals("") || m_number.getText().toString().equals("") || uwork_area.getText().toString().equals("") || upassword.getText().toString().equals("") || ure_password.getText().toString().equals("") || uaddress.getText().toString().equals("") || uexperience.getText().toString().equals("") || ucategory.getText().toString().equals("")|| usal.getText().toString().equals("")){
                     Toast.makeText(SignUpActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
                 }
                 else{
@@ -69,6 +70,7 @@ public class SignUpActivity extends AppCompatActivity{
                             ure_password.getText().toString(),
                             uaddress.getText().toString(),
                             uexperience.getText().toString(),
+                            usal.getText().toString(),
                             ucategory.getText().toString());
 //
 
@@ -78,7 +80,7 @@ public class SignUpActivity extends AppCompatActivity{
 //                            UserDetails.User newRowID = new UserDetails.User(f_name,l_name,
 //                                    email,m_number,work_area,
 //                                    password,re_password);
-                            boolean insert = DB.insertData(f_name.getText().toString(), l_name.getText().toString() ,uemail.getText().toString(), m_number.getText().toString(), uwork_area.getText().toString(), upassword.getText().toString() ,ure_password.getText().toString(), uaddress.getText().toString(), uexperience.getText().toString(), ucategory.getText().toString());
+                            boolean insert = DB.insertData(f_name.getText().toString(), l_name.getText().toString() ,uemail.getText().toString(), m_number.getText().toString(), uwork_area.getText().toString(), upassword.getText().toString() ,ure_password.getText().toString(), uaddress.getText().toString(), uexperience.getText().toString(), usal.getText().toString(),ucategory.getText().toString());
                             if (insert == false){
 
                                 Toast.makeText(SignUpActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
@@ -92,7 +94,9 @@ public class SignUpActivity extends AppCompatActivity{
                         //get the relavanttodo from the database
                         //UserDetails worker=workers.get(position);
                         String e=uemail.getText().toString();
+                       // String s= usal.getText().toString();
                         intent.putExtra("email",e);
+                        //intent.putExtra("data1",s);
                         startActivity(intent);
 
 

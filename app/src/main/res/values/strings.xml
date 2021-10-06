@@ -66,4 +66,6 @@
     <string name="adv">Advance :</string>
     <string name="bal">Balance :</string>
 
+    <string name="topView">Work Byte payment Protection: Only pay for work you authorize</string>
+
 </resources>

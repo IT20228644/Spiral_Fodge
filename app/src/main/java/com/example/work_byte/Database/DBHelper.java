@@ -62,6 +62,7 @@ public class DBHelper extends SQLiteOpenHelper {
                     + UserDetails.User.workArea + " NOT NULL," + UserDetails.User.password + " NOT NULL,"
                     + UserDetails.User.re_password + " NOT NULL,"  + UserDetails.User.address + " NOT NULL,"
                     + UserDetails.User.category + " NOT NULL," + UserDetails.User.experience + " NOT NULL,"
+                    + UserDetails.User.salary + " NOT NULL,"
                     + UserDetails.User.pro_image  +")";
                     //+ UserDetails.User.pro_image + " NOT NULL" +")";
 
@@ -70,7 +71,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public boolean insertData(String f_name, String l_name, String email, String m_number, String work_area, String password, String re_password, String address, String experience, String category) {
+    public boolean insertData(String f_name, String l_name, String email, String m_number, String work_area, String password, String re_password, String address, String experience,String salary, String category) {
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -85,7 +86,9 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(UserDetails.User.re_password, re_password);
         values.put(UserDetails.User.address, address);
         values.put(UserDetails.User.experience, experience);
+        values.put(UserDetails.User.salary, salary);
         values.put(UserDetails.User.category, category);
+
 
 
 
@@ -256,7 +259,7 @@ public class DBHelper extends SQLiteOpenHelper {
     Cursor cursor=db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
             UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
             UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
-            UserDetails.User.experience,UserDetails.User.category},UserDetails.User.category+ "=?",new String[]{category},null,null,null);
+            UserDetails.User.experience,UserDetails.User.salary,UserDetails.User.category},UserDetails.User.category+ "=?",new String[]{category},null,null,null);
 
     //check whether the table has data.go to first raw.if empty return false
     if(cursor.moveToFirst()) {
@@ -275,7 +278,8 @@ public class DBHelper extends SQLiteOpenHelper {
             workerModel.setRepassword(cursor.getString(7));
             workerModel.setAddress(cursor.getString(8));
             workerModel.setExperience(cursor.getString(9));
-            workerModel.setCategory(cursor.getString(10));
+            workerModel.setSalary(cursor.getInt(10));
+            workerModel.setCategory(cursor.getString(11));
 
 
             //add todoModel to the list type object
@@ -315,6 +319,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 workerModel.setAddress(cursor.getString(8));
                 workerModel.setExperience(cursor.getString(9));
                 workerModel.setCategory(cursor.getString(10));
+                workerModel.setSalary(cursor.getInt(11));
 
 
                 //add todoModel to the list type object
@@ -330,7 +335,7 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor=  db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
                 UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
                 UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
-                UserDetails.User.experience,UserDetails.User.category},UserDetails.User.email+"=?",new String[]{email},null,null,null);
+                UserDetails.User.category,UserDetails.User.experience,UserDetails.User.salary},UserDetails.User.email+"=?",new String[]{email},null,null,null);
 
         UserDetails workerModel;
         if(cursor != null) {
@@ -345,39 +350,41 @@ public class DBHelper extends SQLiteOpenHelper {
                     cursor.getString(7),
                     cursor.getString(8),
                     cursor.getString(9),
-                    cursor.getString(10));
+                    cursor.getString(10),
+                    cursor.getInt(11));
 
             return workerModel;
         }
         return  null;
     }
 
-    public UserDetails getSingleWorkerbyId(int id){
-        SQLiteDatabase db=getWritableDatabase();
-        Cursor cursor=  db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
-                UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
-                UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
-                UserDetails.User.experience,UserDetails.User.category},UserDetails.User.worker_id+"=?",new String[]{String.valueOf(id)},null,null,null);
-
-        UserDetails workerModel;
-        if(cursor != null) {
-            cursor.moveToFirst();
-            workerModel = new UserDetails(cursor.getInt(0),
-                    cursor.getString(1),
-                    cursor.getString(2),
-                    cursor.getString(3),
-                    cursor.getString(4),
-                    cursor.getString(5),
-                    cursor.getString(6),
-                    cursor.getString(7),
-                    cursor.getString(8),
-                    cursor.getString(9),
-                    cursor.getString(10));
-
-            return workerModel;
-        }
-        return  null;
+//    public UserDetails getSingleWorkerbyId(int id){
+//        SQLiteDatabase db=getWritableDatabase();
+//        Cursor cursor=  db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
+//                UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
+//                UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
+//                UserDetails.User.experience,UserDetails.User.salary,UserDetails.User.category},UserDetails.User.worker_id+"=?",new String[]{String.valueOf(id)},null,null,null);
+//
+//        UserDetails workerModel;
+//        if(cursor != null) {
+//            cursor.moveToFirst();
+//            workerModel = new UserDetails(cursor.getInt(0),
+//                    cursor.getString(1),
+//                    cursor.getString(2),
+//                    cursor.getString(3),
+//                    cursor.getString(4),
+//                    cursor.getString(5),
+//                    cursor.getString(6),
+//                    cursor.getString(7),
+//                    cursor.getString(8),
+//                    cursor.getString(9),
+//                    cursor.getInt(10),
+//                    cursor.getString(11));
+//
+//            return workerModel;
+//        }
+//        return  null;
     }
 
 
-}
+

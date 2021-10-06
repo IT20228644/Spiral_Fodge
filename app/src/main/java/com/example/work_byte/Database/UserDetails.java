@@ -16,8 +16,38 @@ public class UserDetails {
     private String address;
     private String experience;
     private String category;
+    private int salary;
 
     public UserDetails() {
+    }
+
+    public UserDetails(int userId, String first_name, String last_name, String email, String mobile, String workArea, String password, String repassword, String address, String experience, String category, int salary) {
+        this.userId = userId;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.mobile = mobile;
+        this.workArea = workArea;
+        this.password = password;
+        this.repassword = repassword;
+        this.address = address;
+        this.experience = experience;
+        this.category = category;
+        this.salary = salary;
+    }
+
+    public UserDetails(String first_name, String last_name, String email, String mobile, String workArea, String password, String repassword, String address, String experience, String category, int salary) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.mobile = mobile;
+        this.workArea = workArea;
+        this.password = password;
+        this.repassword = repassword;
+        this.address = address;
+        this.experience = experience;
+        this.category = category;
+        this.salary = salary;
     }
 
     public UserDetails(int userId, String first_name, String last_name, String email, String mobile, String workArea, String password, String repassword, String address, String experience, String category) {
@@ -146,6 +176,14 @@ public class UserDetails {
         this.experience = experience;
     }
 
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
     public static class User implements BaseColumns{
 
 
@@ -202,6 +240,10 @@ public class UserDetails {
             return category;
         }
 
+//        public static String getSalary() {
+//            return salary;
+//        }
+
         public static  String worker_id = "id";
         public static  String first_name = "f_name";
         public static  String last_name = "l_name";
@@ -222,7 +264,9 @@ public class UserDetails {
         public static  String address = "address";
         public static  String experience = "experience";
         public static  String category = "category";
+        public static String salary= "salary";
         public static String pro_image = "pro_image";
+
     }
 
 

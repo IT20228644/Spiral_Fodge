@@ -80,7 +80,7 @@ public class AddHireDetail extends AppCompatActivity {
         myIntent.putExtra("cusLoc",uLoc);
         myIntent.putExtra("uDate",uDate);
         myIntent.putExtra("email",uEmail);
-        myIntent.putExtra("uPhone",String.valueOf(uPhone) );
+        myIntent.putExtra("uPhone",String.valueOf(uPhone));
 
         myIntent.putExtra("des",uDes);
 

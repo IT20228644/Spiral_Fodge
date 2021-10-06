@@ -18,7 +18,7 @@ import com.example.work_byte.Database.UserDetails;
 
 public class wor_profileNew extends AppCompatActivity {
 
-    private TextView ufirstnameview, ulastnameview, uemailview, uworkareaview, uteleview, uexperenceview,udes;
+    private TextView ufirstnameview, ulastnameview, uemailview, uworkareaview, uteleview, uexperenceview,udes,usal;
     private DBHelper dbHelper;
     private Context context;
     Button btn1;
@@ -37,6 +37,7 @@ public class wor_profileNew extends AppCompatActivity {
         uteleview = findViewById(R.id.tele_view);
         uexperenceview = findViewById(R.id.experience_view);
         udes=findViewById(R.id.des_view);
+        usal=findViewById(R.id.salView);
         btn1=findViewById(R.id.hireMe);
 
         //catch the values coming from relavent d
@@ -51,13 +52,15 @@ public class wor_profileNew extends AppCompatActivity {
         uteleview.setText(workerModel.getMobile());
         uexperenceview.setText(workerModel.getExperience());
         udes.setText(workerModel.getCategory());
+        usal.setText(String.valueOf(workerModel.getSalary()));
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(context,AddHireDetail.class);
-                //intent.putExtra("data1",String.valueOf(workerModel.getSalary()));
+                intent.putExtras(getIntent().getExtras());
                 intent.putExtra("worker",workerModel.getFirst_name());
+                intent.putExtra("data1",String.valueOf(workerModel.getSalary()));
 
                 startActivity(intent);
             }

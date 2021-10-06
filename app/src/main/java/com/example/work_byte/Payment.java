@@ -45,6 +45,8 @@ public class Payment extends AppCompatActivity {
         String data1 = b.getString("data1");
         String data2 = b.getString("data2");
         int ans=Integer.parseInt(data1)*Integer.parseInt(data2);
+        System.out.println(data1);
+        System.out.println(data2);
 
         double ans2=ans*0.1;
 
