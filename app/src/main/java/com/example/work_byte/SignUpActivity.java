@@ -23,7 +23,7 @@ public class SignUpActivity extends AppCompatActivity{
     Button sign_up, sign_in;
     DBHelper DB;
     private List<UserDetails> workers;
-    int position=0;
+    //int position=0;
 
 
 
@@ -48,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity{
         workers=new ArrayList<>();
 
         DB = new DBHelper(this);
-        //workers=DB.getAllWorkers();
+        workers=DB.getAllWorkers();
 
 
         sign_up.setOnClickListener(new View.OnClickListener() {
@@ -82,12 +82,18 @@ public class SignUpActivity extends AppCompatActivity{
                             if (insert == false){
 
                                 Toast.makeText(SignUpActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), WorkerViewActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), wor_profileNew.class);
                                 startActivity(intent);
                             }else
                                 Toast.makeText(SignUpActivity.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
                         }else
                             Toast.makeText(SignUpActivity.this, "Registered Successfully.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), wor_profileNew.class);
+                        //get the relavanttodo from the database
+                        //UserDetails worker=workers.get(position);
+                        String e=uemail.getText().toString();
+                        intent.putExtra("email",e);
+                        startActivity(intent);
 
 
                     }else

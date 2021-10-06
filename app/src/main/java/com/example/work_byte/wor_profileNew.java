@@ -40,10 +40,10 @@ public class wor_profileNew extends AppCompatActivity {
         btn1=findViewById(R.id.hireMe);
 
         //catch the values coming from relavent d
-        final String worker_id=getIntent().getStringExtra("worker_id");
+        final String email=getIntent().getStringExtra("email");
 
         //System.out.println(worker_id);
-        UserDetails workerModel=dbHelper.getSingleWorker(worker_id);//string to int
+        UserDetails workerModel=dbHelper.getSingleWorkerbyEmail(email);//string to int
         ufirstnameview.setText(workerModel.getFirst_name());
         ulastnameview.setText(workerModel.getLast_name());
         uemailview.setText(workerModel.getEmail());

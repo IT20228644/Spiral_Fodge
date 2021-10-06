@@ -49,7 +49,8 @@ public class LoginActivity extends AppCompatActivity {
                     if (checkUserPass == true){
 
                         Toast.makeText(LoginActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), WorkerViewActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), wor_profileNew.class);
+                        intent.putExtra("email",loginemail);
                         startActivity(intent);
                     }else{
                         Toast.makeText(LoginActivity.this, "Invalid email or password!", Toast.LENGTH_SHORT).show();

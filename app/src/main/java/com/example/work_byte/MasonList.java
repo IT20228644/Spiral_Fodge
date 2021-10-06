@@ -51,7 +51,7 @@ public class MasonList extends AppCompatActivity {
                 UserDetails worker=workers.get(position);
 
                 Intent i=new Intent(context,wor_profileNew.class);
-                i.putExtra("worker_id",worker.getEmail());
+                i.putExtra("email",worker.getEmail());
                 startActivity(i);
 
             }
