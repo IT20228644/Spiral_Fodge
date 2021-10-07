@@ -2,12 +2,16 @@ package com.example.work_byte.Database;
 
 import android.provider.BaseColumns;
 
-public class UserDetails {
+public class CustomerDetails {
 
+    public CustomerDetails(int anInt, String string, String string1, String string2, String string3, String string4, String string5, String string6, String string7, String string8, String string9) {
 
-    public static class User implements BaseColumns{
+    }
 
-        public static final String TABLE_NAME = "users";
+    public static class Customer implements BaseColumns {
+
+        public static final String TABLE_NAME = "customers";
+        public static int userId;
 
         public static String getTableName() {
             return TABLE_NAME;
@@ -29,10 +33,6 @@ public class UserDetails {
             return mobile;
         }
 
-        public static String getWorkArea() {
-            return workArea;
-        }
-
         public static String getPassword() {
             return password;
         }
@@ -45,26 +45,14 @@ public class UserDetails {
             return address;
         }
 
-        public static String getExperience() {
-            return experience;
-        }
-
-        public static String getCategory() {
-            return category;
-        }
 
         public static  String first_name = "f_name";
         public static  String last_name = "l_name";
         public static  String email = "email";
         public static  String mobile = "m_number";
-        public static  String workArea = "work_area";
         public static  String password = "password";
         public static  String re_password = "re_password";
         public static  String address = "address";
-        public static  String experience = "experience";
-        public static  String category = "category";
+
     }
-
-
 }
-

@@ -66,7 +66,7 @@ public class SignUpActivity extends AppCompatActivity{
                     if (password.getText().toString().equals(re_password.getText().toString())){
                         Boolean usercheck = DB.checkUseremail(email.getText().toString());
                         if (usercheck == false){
-//                            UserDetails.User newRowID = new UserDetails.User(f_name,l_name,
+//                            UserDetails.CustomerDetails newRowID = new UserDetails.CustomerDetails(f_name,l_name,
 //                                    email,m_number,work_area,
 //                                    password,re_password);
                             boolean insert = DB.insertData(f_name.getText().toString(), l_name.getText().toString() ,email.getText().toString(), m_number.getText().toString(), work_area.getText().toString(), password.getText().toString() ,re_password.getText().toString(), address.getText().toString(), experience.getText().toString(), category.getText().toString());

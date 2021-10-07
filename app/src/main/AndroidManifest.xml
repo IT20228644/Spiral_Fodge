@@ -13,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WORK_BYTE">
         <activity
+            android:name=".ConfirmCustomerDelete"
+            android:exported="true" />
+        <activity
+            android:name=".EditCustomerProfile"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerSignup"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerProfile"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerLogin"
+            android:exported="true" />
+        <activity
             android:name=".AddWorker"
             android:exported="true" />
         <activity
