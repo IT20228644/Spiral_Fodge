@@ -122,8 +122,7 @@ public class DbHandler extends SQLiteOpenHelper {
 
     }
 
-    /*insert Data*/
-
+    //insert worker
     public void addWorkerDetails(WorkerModel workerModel){
 
         //write data into db
@@ -165,6 +164,7 @@ public class DbHandler extends SQLiteOpenHelper {
 //        }
 //    }
 
+    //insert bank details
     public void addBankDetails(BankModel bankModel){
 
         //write data into db
@@ -186,6 +186,7 @@ public class DbHandler extends SQLiteOpenHelper {
         sqLiteDatabase.close();
     }
 
+    //insert hire
     public void addHireDetails(HireModel hireModel){
 
         //write data into db
@@ -210,7 +211,7 @@ public class DbHandler extends SQLiteOpenHelper {
         sqLiteDatabase.close();
     }
 
-    /*get data*/
+
 
     //get all workers
     public List<WorkerModel > getAllWorkers(String c){
@@ -241,11 +242,6 @@ public class DbHandler extends SQLiteOpenHelper {
         return workers;
     }
 
-//    public Cursor getAllData(){
-//        SQLiteDatabase db=getWritableDatabase();
-//        Cursor cursor=db.rawQuery("SELECT * FROM "+ TABLE_NAME2,null);
-//        return cursor;
-//    }
 
     //get all hires
     public List<HireModel > getAllHireDetail(){
@@ -423,30 +419,30 @@ public class DbHandler extends SQLiteOpenHelper {
     }
 
     //update todo
+//    public int updateHire(HireModel hireModel){
+//        SQLiteDatabase db=getWritableDatabase();
+//
+//        //create object to store all inserted data
+//        ContentValues contentValues=new ContentValues();
+//
+//        //colomn names and values
+//        contentValues.put(CUSTOMER_NAME,hireModel.getCustomerName());
+//        contentValues.put(PHONE,hireModel.getPhone());
+//        contentValues.put(LOCATION,hireModel.getLocation());
+//        contentValues.put(DATE,hireModel.getDate());
+//        contentValues.put(DURATION,hireModel.getDuration());
+//        contentValues.put(DES,hireModel.getDescription());
+//
+//        int status=db.update(TABLE_NAME3,contentValues,EMAIL +"=?",new String[]{hireModel.getEmail()});
+//        db.close();
+//        return status;//return no of updated rows
+//    }
 
-    public int updateHire(HireModel hireModel){
-        SQLiteDatabase db=getWritableDatabase();
-
-        //create object to store all inserted data
-        ContentValues contentValues=new ContentValues();
-
-        //colomn names and values
-        contentValues.put(CUSTOMER_NAME,hireModel.getCustomerName());
-        contentValues.put(PHONE,hireModel.getPhone());
-        contentValues.put(LOCATION,hireModel.getLocation());
-        contentValues.put(DATE,hireModel.getDate());
-        contentValues.put(DURATION,hireModel.getDuration());
-        contentValues.put(DES,hireModel.getDescription());
-
-        int status=db.update(TABLE_NAME3,contentValues,EMAIL +"=?",new String[]{hireModel.getEmail()});
-        db.close();
-        return status;//return no of updated rows
-    }
-
+    //update hire
     public boolean updateHireDetail(String email,String cusname,String phone,String loc,String des,String dur,String s_date){
         SQLiteDatabase db=getWritableDatabase();
 
-        //create object to store all inserted data
+        //create object to store all updated data
         ContentValues contentValues=new ContentValues();
 
         contentValues.put(EMAIL,email);
@@ -463,10 +459,5 @@ public class DbHandler extends SQLiteOpenHelper {
 
     }
 
-//    public Cursor getAll(){
-//        SQLiteDatabase db=this.getWritableDatabase();
-//        Cursor c=db.rawQuery("select * from "+TABLE_NAME2,null);
-//        return c;
-//    }
 
 }
