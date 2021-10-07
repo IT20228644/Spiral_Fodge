@@ -29,11 +29,11 @@ public class ConfirmCustomerDelete extends AppCompatActivity {
         deleteAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Integer deletedRows = dbHelper.deleteUser(delEmail.getText().toString());
-//                if (deletedRows > 0)
-//                    Toast.makeText(getApplicationContext(), "Deleted", Toast.LENGTH_SHORT).show();
-//                else
-//                    Toast.makeText(getApplicationContext(), "not deleted", Toast.LENGTH_SHORT).show();
+                boolean isDelete=dbHelper.deleteCustomer(delEmail.getText().toString());
+                if (isDelete==true)
+                    Toast.makeText(getApplicationContext(), "Deleted", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(getApplicationContext(), "not deleted", Toast.LENGTH_SHORT).show();
                 warnpopup();
             }
         });

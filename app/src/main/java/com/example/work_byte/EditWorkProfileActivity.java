@@ -1,5 +1,6 @@
 package com.example.work_byte;
 
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,7 +22,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.work_byte.Database.DBHelper;
+import com.example.work_byte.Database.UserDetails;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.List;
@@ -32,6 +36,7 @@ public class EditWorkProfileActivity extends AppCompatActivity {
     Button  save;
     ImageButton edit_propic;
 
+    private DBHelper dbHelper;
     private static final int IMAGE_PICK_CODE = 1000;
     private static final int PERMISSION_CODE = 1001;
     private int RUSULT_OK;
@@ -54,30 +59,19 @@ public class EditWorkProfileActivity extends AppCompatActivity {
         save = findViewById(R.id.btn_save);
 
 
+        //catch the values coming from relavent d
+        final String email=getIntent().getStringExtra("email");
+
+        //System.out.println(worker_id);
+        UserDetails workerModel=dbHelper.getSingleWorkerbyEmail(email);//string to int
+        work_area.setText(workerModel.getWorkArea());
+        m_number.setText(workerModel.getMobile());
+        experience.setText(workerModel.getExperience());
 
 
-<<<<<<< HEAD
-                if(user.isEmpty()){
-                    Toast.makeText(getApplicationContext(), "No user", Toast.LENGTH_SHORT).show();
-                    e_mail.setText(null);
-                }
-                else{
-                    Toast.makeText(getApplicationContext(), "CustomerDetails Found ! " , Toast.LENGTH_SHORT).show();
 
-                    e_mail.setText(user.get(0).toString());
-                    m_number.setText(user.get(3).toString());
-                    address.setText(user.get(4).toString());
-                    work_area.setText(user.get(1).toString());
-                    experience.setText(user.get(2).toString());
-                    password.setText(user.get(5).toString());
-                    re_password.setText(user.get(6).toString());
 
-                }
-            }
-        });
 
-=======
->>>>>>> abd4ac3ef9820429b6acd18ee361e646a8192706
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -163,5 +157,16 @@ public class EditWorkProfileActivity extends AppCompatActivity {
         else
             Toast.makeText(getApplicationContext(), "Nothing Selected.", Toast.LENGTH_SHORT).show();
     }
+
+    public static byte[] imageViewToByte(ImageView image) {
+        Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] byteArray = stream.toByteArray();
+        return byteArray;
+    }
+
+
 }
+//resultCode == RUSULT_OK && requestCode == IMAGE_PICK_CODE
 //resultCode == RUSULT_OK && requestCode == IMAGE_PICK_CODE

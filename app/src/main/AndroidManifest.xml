@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WORK_BYTE">
         <activity
-<<<<<<< HEAD
             android:name=".ConfirmCustomerDelete"
             android:exported="true" />
         <activity
@@ -27,7 +26,9 @@
             android:exported="true" />
         <activity
             android:name=".CustomerLogin"
-=======
+            android:exported="true" />
+
+        <activity
             android:name=".MyDisputes"
             android:exported="true" />
         <activity
@@ -44,7 +45,6 @@
             android:exported="true" />
         <activity
             android:name=".AddHireDetail"
->>>>>>> abd4ac3ef9820429b6acd18ee361e646a8192706
             android:exported="true" />
         <activity
             android:name=".AddWorker"
