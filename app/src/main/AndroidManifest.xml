@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WORK_BYTE">
         <activity
+<<<<<<< HEAD
             android:name=".ConfirmCustomerDelete"
             android:exported="true" />
         <activity
@@ -26,6 +27,24 @@
             android:exported="true" />
         <activity
             android:name=".CustomerLogin"
+=======
+            android:name=".MyDisputes"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateHire"
+            android:exported="true" />
+        <activity
+            android:name=".HireDetail"
+            android:exported="true" />
+        <activity
+            android:name=".BankTransfer"
+            android:exported="true" />
+        <activity
+            android:name=".Payment"
+            android:exported="true" />
+        <activity
+            android:name=".AddHireDetail"
+>>>>>>> abd4ac3ef9820429b6acd18ee361e646a8192706
             android:exported="true" />
         <activity
             android:name=".AddWorker"
@@ -54,10 +73,6 @@
         <activity
             android:name=".EditWorkProfileActivity"
             android:exported="true" />
-        <activity
-            android:name=".payment"
-            android:exported="true" />
-        <activity android:name=".HireDetail" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />

@@ -15,9 +15,12 @@ public class StartActivity extends AppCompatActivity {
 
     Button as_work, as_visit;
 
+<<<<<<< HEAD
     private Context context;
 
 
+=======
+>>>>>>> abd4ac3ef9820429b6acd18ee361e646a8192706
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,11 +50,31 @@ public class StartActivity extends AppCompatActivity {
         as_visit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 Intent intent_work = new Intent(StartActivity.this, CustomerLogin.class);
                 startActivity(intent_work);
             }
         });
 
+=======
+
+                Intent intent_visit = new Intent(getApplicationContext(),Category.class);
+
+                //Intent intent_visit = new Intent(getApplicationContext(),EditWorkProfileActivity.class);
+
+                startActivity(intent_visit);
+            }
+        });
+
+
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent= new Intent(StartActivity.this,ReviewActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+>>>>>>> abd4ac3ef9820429b6acd18ee361e646a8192706
     }
 
 }

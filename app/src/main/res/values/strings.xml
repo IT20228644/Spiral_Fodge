@@ -54,4 +54,18 @@
     <string name="confirm">Confirm cancal</string>
     <string name="showmylist">showmylist</string>
 
+
+    <string name="topTxt">Thank you for deal with Work Byte</string>
+    <string name="cus">Customer :</string>
+    <string name="wor">Worker :</string>
+    <string name="Date_new">Date :</string>
+    <string name="hire">Hire Detail</string>
+    <string name="wlocation">Work Location :</string>
+    <string name="s_date">Work Starting Date :</string>
+    <string name="totall">Total :</string>
+    <string name="adv">Advance :</string>
+    <string name="bal">Balance :</string>
+
+    <string name="topView">Work Byte payment Protection: Only pay for work you authorize</string>
+
 </resources>

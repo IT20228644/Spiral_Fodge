@@ -1,8 +1,14 @@
 package com.example.work_byte.Database;
 
 
-import static com.example.work_byte.Database.UserDetails.User.TABLE_NAME;
-import static com.example.work_byte.Database.UserDetails.User.category;
+//import static com.example.work_byte.Database.UserDetails.User.TABLE_NAME;
+//import static com.example.work_byte.Database.UserDetails.User.category;
+//import static com.example.work_byte.Database.UserDetails.User.email;
+//import static com.example.work_byte.Database.UserDetails.User.experience;
+//import static com.example.work_byte.Database.UserDetails.User.first_name;
+//import static com.example.work_byte.Database.UserDetails.User.last_name;
+//import static com.example.work_byte.Database.UserDetails.User.mobile;
+//import static com.example.work_byte.Database.UserDetails.User.workArea;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -23,11 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
-    // If you change the database schema, you must increment the database version.
-//    public static final int DATABASE_VERSION = 1;
-//    public static final String DATABASE_NAME = "work_byte.db";
-
-
 
     public DBHelper(Context context) {
         super(context, "work_byte.db", null, 1);
@@ -36,7 +37,6 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
-
 
     }
 
@@ -55,18 +55,23 @@ public class DBHelper extends SQLiteOpenHelper {
 
     private static final String SQL_CREATE_ENTRIES =
 
-            "CREATE TABLE " + TABLE_NAME + "("
+            "CREATE TABLE " + UserDetails.User.TABLE_NAME + "("
+                    +UserDetails.User.worker_id + " INTEGER PRIMARY KEY "+" AUTOINCREMENT,"
                     + UserDetails.User.first_name + " NOT NULL," + UserDetails.User.last_name + "  NOT NULL,"
-                    + UserDetails.User.email + "  NOT NULL PRIMARY KEY," + UserDetails.User.mobile + "  NOT NULL,"
+                    + UserDetails.User.email + "  NOT NULL ," + UserDetails.User.mobile + "  NOT NULL,"
                     + UserDetails.User.workArea + " NOT NULL," + UserDetails.User.password + " NOT NULL,"
                     + UserDetails.User.re_password + " NOT NULL,"  + UserDetails.User.address + " NOT NULL,"
-                    + UserDetails.User.category + " NOT NULL," + UserDetails.User.experience + " NOT NULL" +")";
+                    + UserDetails.User.category + " NOT NULL," + UserDetails.User.experience + " NOT NULL,"
+                    + UserDetails.User.salary + " NOT NULL,"
+                    + UserDetails.User.pro_image  +")";
+                    //+ UserDetails.User.pro_image + " NOT NULL" +")";
 
-    private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + TABLE_NAME;
+
+    private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + UserDetails.User.TABLE_NAME;
 
 
 
-    public boolean insertData(String f_name, String l_name, String email, String m_number, String work_area, String password, String re_password, String address, String experience, String category) {
+    public boolean insertData(String f_name, String l_name, String email, String m_number, String work_area, String password, String re_password, String address, String experience,String salary, String category) {
         // Gets the data repository in write mode
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -81,12 +86,14 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(UserDetails.User.re_password, re_password);
         values.put(UserDetails.User.address, address);
         values.put(UserDetails.User.experience, experience);
+        values.put(UserDetails.User.salary, salary);
         values.put(UserDetails.User.category, category);
 
 
 
+
 // Insert the new row, returning the primary key value of the new row
-        long result = db.insert(TABLE_NAME, String.valueOf(values), values);
+        long result = db.insert(UserDetails.User.TABLE_NAME, String.valueOf(values), values);
         if (result == -1)
             return false;
         else
@@ -221,9 +228,6 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
     }
 
-
-
-
     public boolean checkUseremail (String email){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select * from users where email = ?", new String[] {email});
@@ -245,4 +249,142 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //get all workers as list when click category
+    public List<UserDetails> getAllWorkers(String category){
+    List<UserDetails> workers=new ArrayList<>();
+    SQLiteDatabase db=getReadableDatabase();
+    //String query=" SELECT * FROM "+UserDetails.User.TABLE_NAME;
+    //Cursor cursor=db.rawQuery(query,null);
+    Cursor cursor=db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
+            UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
+            UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
+            UserDetails.User.experience,UserDetails.User.salary,UserDetails.User.category},UserDetails.User.category+ "=?",new String[]{category},null,null,null);
+
+    //check whether the table has data.go to first raw.if empty return false
+    if(cursor.moveToFirst()) {
+        do {
+            //create empty workerModel object
+            UserDetails workerModel=new UserDetails();
+
+            //set values
+            workerModel.setUserId(cursor.getInt(0));
+            workerModel.setFirst_name(cursor.getString(1));
+            workerModel.setLast_name(cursor.getString(2));
+            workerModel.setEmail(cursor.getString(3));
+            workerModel.setMobile(cursor.getString(4));
+            workerModel.setWorkArea(cursor.getString(5));
+            workerModel.setPassword(cursor.getString(6));
+            workerModel.setRepassword(cursor.getString(7));
+            workerModel.setAddress(cursor.getString(8));
+            workerModel.setExperience(cursor.getString(9));
+            workerModel.setSalary(cursor.getInt(10));
+            workerModel.setCategory(cursor.getString(11));
+
+
+            //add todoModel to the list type object
+            workers.add(workerModel);
+
+        }while(cursor.moveToNext());
+    }
+    return workers;
 }
+
+
+    public List<UserDetails> getAllWorkers(){
+        List<UserDetails> workers=new ArrayList<>();
+        SQLiteDatabase db=getReadableDatabase();
+        String query=" SELECT * FROM "+UserDetails.User.TABLE_NAME;
+        Cursor cursor=db.rawQuery(query,null);
+        //Cursor cursor=db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
+                //UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
+                //UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
+                //UserDetails.User.experience,UserDetails.User.category},UserDetails.User.category+ "=?",new String[]{category},null,null,null);
+
+        //check whether the table has data.go to first raw.if empty return false
+        if(cursor.moveToFirst()) {
+            do {
+                //create empty workerModel object
+                UserDetails workerModel=new UserDetails();
+
+                //set values
+                workerModel.setUserId(cursor.getInt(0));
+                workerModel.setFirst_name(cursor.getString(1));
+                workerModel.setLast_name(cursor.getString(2));
+                workerModel.setEmail(cursor.getString(3));
+                workerModel.setMobile(cursor.getString(4));
+                workerModel.setWorkArea(cursor.getString(5));
+                workerModel.setPassword(cursor.getString(6));
+                workerModel.setRepassword(cursor.getString(7));
+                workerModel.setAddress(cursor.getString(8));
+                workerModel.setExperience(cursor.getString(9));
+                workerModel.setCategory(cursor.getString(10));
+                workerModel.setSalary(cursor.getInt(11));
+
+
+                //add todoModel to the list type object
+                workers.add(workerModel);
+
+            }while(cursor.moveToNext());
+        }
+        return workers;
+    }
+    //get single Worker
+    public UserDetails getSingleWorkerbyEmail(String email){
+        SQLiteDatabase db=getWritableDatabase();
+        Cursor cursor=  db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
+                UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
+                UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
+                UserDetails.User.category,UserDetails.User.experience,UserDetails.User.salary},UserDetails.User.email+"=?",new String[]{email},null,null,null);
+
+        UserDetails workerModel;
+        if(cursor != null) {
+            cursor.moveToFirst();
+            workerModel = new UserDetails(cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6),
+                    cursor.getString(7),
+                    cursor.getString(8),
+                    cursor.getString(9),
+                    cursor.getString(10),
+                    cursor.getInt(11));
+
+            return workerModel;
+        }
+        return  null;
+    }
+
+//    public UserDetails getSingleWorkerbyId(int id){
+//        SQLiteDatabase db=getWritableDatabase();
+//        Cursor cursor=  db.query(UserDetails.User.TABLE_NAME,new String[]{UserDetails.User.worker_id,UserDetails.User.first_name,
+//                UserDetails.User.last_name,UserDetails.User.email,UserDetails.User.mobile,
+//                UserDetails.User.workArea,UserDetails.User.password,UserDetails.User.re_password,UserDetails.User.address,
+//                UserDetails.User.experience,UserDetails.User.salary,UserDetails.User.category},UserDetails.User.worker_id+"=?",new String[]{String.valueOf(id)},null,null,null);
+//
+//        UserDetails workerModel;
+//        if(cursor != null) {
+//            cursor.moveToFirst();
+//            workerModel = new UserDetails(cursor.getInt(0),
+//                    cursor.getString(1),
+//                    cursor.getString(2),
+//                    cursor.getString(3),
+//                    cursor.getString(4),
+//                    cursor.getString(5),
+//                    cursor.getString(6),
+//                    cursor.getString(7),
+//                    cursor.getString(8),
+//                    cursor.getString(9),
+//                    cursor.getInt(10),
+//                    cursor.getString(11));
+//
+//            return workerModel;
+//        }
+//        return  null;
+    }
+
+
+

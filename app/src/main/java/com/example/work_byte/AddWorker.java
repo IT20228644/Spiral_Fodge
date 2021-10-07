@@ -57,7 +57,7 @@ public class AddWorker extends AppCompatActivity {
                 dbHandler.addWorkerDetails(workerModel);
 
                 //again redirect to the main activity
-                Intent intent=new Intent(context,Category.class);
+                Intent intent=new Intent(context,wor_profileNew.class);
 //                intent.putExtra("id",String.valueOf(workerModel.getWorkerId()));
                 intent.putExtra(EXTRA_MESSAGE2,String.valueOf(userSalary));
 //                System.out.println();

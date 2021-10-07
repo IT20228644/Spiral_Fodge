@@ -10,22 +10,30 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.work_byte.Database.UserDetails;
 import com.example.work_byte.Database.WorkerModel;
 
 import java.util.List;
 
-public class WorkerAdapter extends ArrayAdapter<WorkerModel> {
+public class WorkerAdapter extends ArrayAdapter<UserDetails> {
     private Context context;
     private int resource;
-    private List<WorkerModel> workers;
+    //private List<WorkerModel> workers;
+    private List<UserDetails> workers;
 
-    public WorkerAdapter(Context context, int resource,List<WorkerModel> workers) {
+//   public WorkerAdapter(Context context, int resource,List<WorkerModel> workers) {
+//        super(context, resource,workers);
+//        this.context=context;
+//        this.resource=resource;
+//        this.workers=workers;
+//    }
+
+    public WorkerAdapter(Context context, int resource, List<UserDetails> workers) {
         super(context, resource,workers);
         this.context=context;
         this.resource=resource;
         this.workers=workers;
     }
-
 
     //this method will interact with the single_todo.xml and display the relevant values from the database
     @NonNull
@@ -45,10 +53,11 @@ public class WorkerAdapter extends ArrayAdapter<WorkerModel> {
         //Button btn=row.findViewById(R.id.cancal);
 
 
-        WorkerModel worker= workers.get(position);//todos[0,1,2]=>todos[index].position is auto incremented.
-        wname.setText(worker.getWorkerName());
-        wprice.setText(String.valueOf(worker.getSalary()));
-        wcategory.setText(worker.getCategory());
+        UserDetails worker= workers.get(position);//todos[0,1,2]=>todos[index].position is auto incremented.
+        wname.setText(worker.getFirst_name());
+       //wprice.setText(String.valueOf(worker.getCategory()));
+       wprice.setText(worker.getCategory());
+       wcategory.setText(worker.getExperience());
 //        btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

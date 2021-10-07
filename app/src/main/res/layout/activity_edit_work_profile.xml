@@ -6,27 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".EditWorkProfileActivity">
 
-    <ImageView
-        android:id="@+id/imageView13"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/propicedit"
         android:layout_width="117dp"
         android:layout_height="112dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="172dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar2"
-        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+        app:srcCompat="@drawable/ic_baseline_account_circle_24"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/black"/>
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_edit_propic"
         android:layout_width="33dp"
         android:layout_height="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411"
+        app:layout_constraintVertical_bias="0.378"
         app:srcCompat="@drawable/ic_baseline_edit_24"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -35,7 +36,7 @@
         android:layout_width="302dp"
         android:layout_height="53dp"
         android:layout_marginEnd="10dp"
-        android:hint="Search your email here"
+        android:hint="Enter your email here to edit profile"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +88,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.942"
+        app:backgroundTint="@null"/>
 
     <EditText
         android:id="@+id/passwrdedit"
@@ -316,25 +318,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.516" />
-
-    <Button
-        android:id="@+id/btn_search"
-        android:layout_width="261dp"
-        android:layout_height="48dp"
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:text="Search"
-        android:textColor="#218c79"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209"
-        tools:ignore="OnClick" />
 
     <ImageView
         android:id="@+id/imageView11"
