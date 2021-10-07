@@ -56,6 +56,28 @@ public class EditWorkProfileActivity extends AppCompatActivity {
 
 
 
+<<<<<<< HEAD
+                if(user.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "No user", Toast.LENGTH_SHORT).show();
+                    e_mail.setText(null);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "CustomerDetails Found ! " , Toast.LENGTH_SHORT).show();
+
+                    e_mail.setText(user.get(0).toString());
+                    m_number.setText(user.get(3).toString());
+                    address.setText(user.get(4).toString());
+                    work_area.setText(user.get(1).toString());
+                    experience.setText(user.get(2).toString());
+                    password.setText(user.get(5).toString());
+                    re_password.setText(user.get(6).toString());
+
+                }
+            }
+        });
+
+=======
+>>>>>>> abd4ac3ef9820429b6acd18ee361e646a8192706
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

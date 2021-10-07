@@ -1,7 +1,6 @@
 package com.example.work_byte.Database;
 
 import android.provider.BaseColumns;
-import android.widget.EditText;
 
 public class UserDetails {
 
@@ -268,7 +267,6 @@ public class UserDetails {
         public static String pro_image = "pro_image";
 
     }
-
 
 
 }

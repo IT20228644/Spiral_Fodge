@@ -389,7 +389,7 @@ public class DbHandler extends SQLiteOpenHelper {
 //    Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME2 + " WHERE " + WORKER_ID + "=?" + new String[]{String.valueOf(id)},null);
 //    cursor.moveToFirst();
 //
-//    //setting related user info in User Object
+//    //setting related user info in CustomerDetails Object
 //   WorkerModel workerModel=new WorkerModel();
     //user.setUserId(cursor.getInt(cursor.getColumnIndexCOLUMN_USER_ID ));
     //user.setFirstName(cursor.getString(cursor.getColumnIndex(COLUMN_USER_FIRST_NAME));
